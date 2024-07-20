@@ -2,11 +2,11 @@
 <?php
 /*
 Exercício do livro PHP-POO para conexao com banco dados MYSQL
-utilizando o a função PDO.
+utilizando a função PDO.
 Aluno: Guglielmo HENRIQUES Targino.
 Data: 19jul24
 Versão: v2.
-pgn 160
+pgn 162
 
 */
 $dsn = 'mysql:dbname=test;host=localhost';
@@ -19,21 +19,16 @@ try{
 
     //Executa o comando SQL
 
-    $dbh->exec("INSERT INTO produto (id_prod,nome_prod,tipo) VALUES (81,'GUGA','kg')");
+   $resu=$dbh->query('SELECT tipo FROM produto');
+    echo "Operação bem sucedida <br>";
 
-    //$sql = 'SELECT * FROM produto ';
-
-   // $sql = 'DELETE FROM login where senha=3440';
-
-    //$sql="UPDATE `login` SET `senha`='3030' WHERE usuario='andrea'";
-
-    //Comandos para exibir resultado na tela
-    /*     
-   foreach ($dbh->query($sql) as $row) {
-        print $row['id_prod'] . "\n";
-        print $row['tipo'] . "\n";       
+      
+   foreach ($resu as $row) {
+      echo $row['tipo']."<br>";
+             
     }
-   */
+   
+
 
 }catch(PDOException $e){
 
