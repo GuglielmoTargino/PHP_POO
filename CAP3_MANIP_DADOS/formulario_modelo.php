@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta lang="pt-br">
 
 
 <?php
 /*Exrcicio modelo de formulario tirado da internet
 Aluno: Guglielmo Targino
 Data:20jul24
-Versão: v0
+Versão: v2
 
  */
   ?>
@@ -16,8 +18,11 @@ Versão: v0
       <label> Password
       <input type="password" name="password" id="password">
       </label>
+      <label> Cargo
+      <input type="password" name="password" id="password">
+      </label>
       <label>
-      <input type="submit" name="submit" id="button" value="Login">
+      <input type="submit" name="submit" id="button" value="Enviar">
       </label>
   </form>
 
