@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+
+
 <?php
 /**
  * programa para inserção de dados no bd 
@@ -39,3 +42,5 @@
 
  
 ?>
+
+</html>
