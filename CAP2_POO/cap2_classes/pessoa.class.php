@@ -11,13 +11,13 @@
 
 class Pessoa{
 
-    var $id;
-    var $nome;
-    var $altura;
-    var $idade;
-    var $nasc;
-    var $escolaridade;
-    var $salario;
+    public $id;
+    public $nome;
+    public $altura;
+    public $idade;
+    public $nasc;
+    public $escolaridade;
+    public $salario;
 
     
     function __construct($id,$nome,$altura,$idade,$nasc,$escolaridade,$salario){

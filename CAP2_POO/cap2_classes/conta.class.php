@@ -10,14 +10,14 @@
  */
 
 
- abstract class Conta{
-    var $agencia;
-    var $codigo;
-    var $datacriacao;
-    var $titular;
-    var $senha;
-    var $saldo;
-    var $cancelada;
+    abstract class Conta{
+        public $agencia;
+        public $codigo;
+        public $datacriacao;
+        public $titular;
+        public $senha;
+        public $saldo;
+        public $cancelada;
 
     
     function __construct($agencia,$codigo,$datacriacao,$titular,$senha,$saldo,$cancelada){
