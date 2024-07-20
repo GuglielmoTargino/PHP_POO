@@ -1,21 +1,23 @@
+
+<!DOCTYPE html>
 <?php
 /*
 Exercício do livro Criar conexao com o bd mysql
 
 Aluno: Guglielmo TARGINO.
-Data: 16fev24
-versão: v0.
+Data: 19jul24
+versão: v2
 
 */
 
-$local_server= 'localhost';
-$user_name = 'root';
-$password = '';
-$db_name = 'mysql';
+$local_server= 'localhost:3306';
+$user_name = 'pmaght';
+$password = '4004';
+$db_name = 'test';
 
 //Variáveis para uso de query
 
-$ref_usuario=3025;
+
 
 
 // Create connection mysql
@@ -33,17 +35,18 @@ $resultado=$conn->query("UPDATE `login` SET `senha`='3025' WHERE usuario='andrea
 
 
 /*
+$resultado=$conn->query("SELECT* FROM login WHERE senha='$ref_usuario'");
 $resultado=$conn->query("DELETE FROM `login` WHERE usuario='cic'");
 */
 
 
-$resultado=$conn->query("SELECT* FROM login WHERE senha='$ref_usuario'");
+$resultado=$conn->query("SELECT* FROM produto");
 
 
 //Exibe resultado na tela
 
 while($qry=mysqli_fetch_assoc($resultado)){
-    echo "usuario BD".$qry['usuario']."senha usuario é".$qry['senha']."<br>";
+    echo "usuario BD".$qry['id_prod']."senha usuario é".$qry['tipo']."<br>";
 }
 
 
@@ -70,3 +73,5 @@ echo "BD Connected successfully";
 */
 
 ?>
+
+</html>

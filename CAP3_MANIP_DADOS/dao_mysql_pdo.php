@@ -1,4 +1,7 @@
 
+
+
+<!DOCTYPE html>
 <?php
 
 /*
@@ -6,20 +9,18 @@
 Programa do livro php para conexao com banco de dados MYSQL.
 
 Aluno: Guglielmo HENRIQUES Targino.
-Data: 23Fev24.
-Versão: v0.
+Data: 19jul24
+Versão: v2.
+pgn 158
 
 */
 
 
 
-$dsn = 'mysql:dbname=mysql;host=localhost';
-$user = 'root';
-$password = '';
+$dsn = 'mysql:dbname=test;host=localhost';
+$user = 'pmaght';
+$password = '4004';
 
-
-
-$ref_usuario=3440;
 
 try{
     //instacia classe para conexao com o BD.
@@ -27,21 +28,21 @@ try{
 
     //Executa o comando SQL
 
-    //$dbh->exec("INSERT INTO login (usuario,senha) VALUES ('GUGA',3440)");
+    $dbh->exec("INSERT INTO produto (id_prod,nome_prod,tipo) VALUES (81,'GUGA','kg')");
 
-    //$sql = 'SELECT * FROM login where senha=3440';
+    //$sql = 'SELECT * FROM produto ';
 
    // $sql = 'DELETE FROM login where senha=3440';
 
-    $sql="UPDATE `login` SET `senha`='3030' WHERE usuario='andrea'";
+    //$sql="UPDATE `login` SET `senha`='3030' WHERE usuario='andrea'";
 
     //Comandos para exibir resultado na tela
-    
-    foreach ($dbh->query($sql) as $row) {
-        print $row['usuario'] . "\n";
-        print $row['senha'] . "\n";
-       
+    /*     
+   foreach ($dbh->query($sql) as $row) {
+        print $row['id_prod'] . "\n";
+        print $row['tipo'] . "\n";       
     }
+   */
 
 }catch(PDOException $e){
 
@@ -56,3 +57,4 @@ try{
 
 
 ?>
+</html>
