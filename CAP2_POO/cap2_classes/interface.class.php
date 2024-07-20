@@ -1,38 +1,40 @@
+<!DOCTYPE html>
 <?php
 
-#interface aluno
+/*Revisão de exercicios do livro PHP-POO
+Aluno: Guglielmo Targino.
+Data:19jul24;
+Vrsã<o:v2 
+pgn 132 
+ */
 
 interface IAluno{
-    function setNOME($x);
-    function getNOME();
-    function setRESPONSAVEL($xb);
+    private $nome;
+    function setNome($x);
+    function getNome();
+    function setResponsavel(Pessoa $xb);
 }
 
 class Aluno implements IAluno{
 
     #atribui nome ao aluno
-    function setNOME($x){
+    function setNome($x){
         $this->nome=$x;
     }
 
-    function getNOME(){
-        return $this->$x;
+    function getNome(){
+        return $this->nome;
     }
 
-    function setRESPONSAVEL($xb){
+    function setResponsavel($xb){
 
     }
 
 }
 
-
 #criar um objeto.
-
-
 $guga=new Aluno;
 
-
-
-
-
 ?>
+
+</html>

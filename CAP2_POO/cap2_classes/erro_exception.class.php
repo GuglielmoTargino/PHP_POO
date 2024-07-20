@@ -1,4 +1,17 @@
+
+<!DOCTYPE html>
+
+
 <?php
+
+/*Revisão de exercícios do livro PHP-POO
+
+Aluno: Guglielmo Targino.
+Data: 19jul24.
+Versão: v2.
+pgn 150
+ * 
+ */
 
  function abrirArquivo($file=null){
 
@@ -48,3 +61,5 @@ catch(FilePermissionException $excecao){
 }
 
 ?>
+
+</html>

@@ -22,29 +22,7 @@ $lic->escolaridade='novato';
 $lic->salario=200;
 */
 
-echo "o objeto é {$lic->altura}";
-
-
- 
- $pgto=new Conta(202,8,233409,'lic',1,20,'nao');
-
- function Transferir($conta,$valor){
-    if($this->Retirar($valor)){
-        $conta->Depositar($valor);
-    }
- }
-
-
-
-echo "{$pgto->agencia}";
-/*
-$pgto->codigo=8;
-$pgto->datacriacao=0409;
-$pgto->titular='lic';
-$pgto->senha=0001;
-$pgto->saldo=20;
-$pgto->cancelada='nao';
-*/
+echo "A altura da pessoa<br> é {$lic->altura}";
 
 ?>
 </html>
