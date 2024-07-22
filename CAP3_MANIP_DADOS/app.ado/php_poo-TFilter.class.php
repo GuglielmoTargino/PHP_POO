@@ -16,6 +16,7 @@ class TFilter extends TExpression{
     private $valor;// valor a ser aplicado.
 
 
+    //construtor
     public function __construct($variavel,$operador,$valor){
 
         $this->variavel=$variavel;
@@ -27,14 +28,14 @@ class TFilter extends TExpression{
     private function Transformar($valor){
         //caso seja uma array
         if(is_array($valor)){
-            //varre valores
-            foreach($valor as $x){                
-                if(is_integer($x)){
-                    //se inteiro
+            //varredura de valores
+            foreach($valor as $x){
+                //se for um inteiro
+                if(is_integer($x)){                    
                     $foo[]=$x;
                 }
-                elseif(is_string($x)){
-                    //se string
+                //se for uma string
+                elseif(is_string($x)){                    
                     $foo[]="'$x'";
                 }
             }
@@ -72,12 +73,8 @@ class TFilter extends TExpression{
     public function Dump(){
         //concatena a expressão
         return "{$this->variavel} {$this->operador} {$this->valor}";
-    }
-
-    
+    }    
     
 }
-
-
-
 ?>
+
