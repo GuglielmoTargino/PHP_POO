@@ -1,12 +1,19 @@
 <?php
+/**
+ * Revisão do livro PHP-POO
+ * Aluno: Guglielmo Targino.
+ * Data:22jul24
+ * Versão:v2
+ * pgn 173
+ */
 
 // classe criada para verificação de filtros de seleção de dados
-//PG 173
+
 class TFilter extends TExpression{
 
-    private $variavel;
-    private $operador;
-    private $valor;
+    private $variavel;//variave a ser inserida
+    private $operador;// operador a ser utilizado
+    private $valor;// valor a ser aplicado.
 
 
     public function __construct($variavel,$operador,$valor){

@@ -9,15 +9,6 @@
  * Coloque seu codigo PHP aqui.
  */
 
-echo "Guga aqui";
-
-
-
-
-
-
-
-
-
+echo "Olá PHP!";
 ?>
 </html>
