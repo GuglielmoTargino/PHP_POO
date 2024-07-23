@@ -10,8 +10,6 @@
 //classe para inseri dados no banco de dados
 //final class TSqlInsert extends TSqlInstruction{
  final class TSqlInsert extends TSqlInstruction{
-    public $columnvalueS;
-    public $entity;
     
     public function setRowData($column,$value){
         if(is_string($value)){

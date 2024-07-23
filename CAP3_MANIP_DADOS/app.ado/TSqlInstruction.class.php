@@ -11,9 +11,10 @@
  */
 
     abstract class TSqlInstruction{
-    var $sql; //guarda instrução sql
-    var $criteria;//guarda objeto criteria
-    var $entity;
+    protected $sql; //guarda instrução sql
+    protected $criteria;//guarda objeto criteria
+    protected $entity;
+    protected $columnvalueS;
     
 
         // método setEntity define o nome da tabela

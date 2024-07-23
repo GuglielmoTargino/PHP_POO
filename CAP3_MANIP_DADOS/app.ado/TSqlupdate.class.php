@@ -8,7 +8,6 @@
  */
 final class TSqlUpdate extends TSqlInstruction{
 
-    private $columnvalueS;
 
     public function setRowData($column, $value){
         //monta array idexada pelo valor da coluna
