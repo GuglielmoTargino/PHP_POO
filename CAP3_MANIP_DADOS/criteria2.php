@@ -4,9 +4,9 @@ carrega as classes
 PG 182
 */
 
-include_once 'app.ado/php_poo-TExpression.php';
-include_once 'app.ado/php_poo-Tcriteria.php';
-include_once 'app.ado/php_poo-TFilter.php';
+include_once 'app.ado/TExpression.class.php';
+include_once 'app.ado/Tcriteria.class.php';
+include_once 'app.ado/TFilter.class.php';
 
 // aqui vamos utilizar um operador OR
 
