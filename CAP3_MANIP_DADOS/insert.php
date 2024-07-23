@@ -24,16 +24,16 @@
     $sql=new TSqlInsert;
     $sql->getEntity('aluno');
 
-    $sql->setRowData('id', 3);
-    $sql->setRowData('nome', 'pedro');
-    $sql->setRowData('fone', '5698');
-    $sql->setRowData('nasc', '4556');
-    $sql->setRowData('sexo', 'm');
-    $sql->setRowData('seria', '4');
+    $sql->setRowData('id', 3);   
+    $sql->setRowData('nome', 'pedro');   
+    $sql->setRowData('fone', '5698');   
+    $sql->setRowData('nasc', '4556');   
+    $sql->setRowData('sexo', 'm');   
+    $sql->setRowData('seria', '4');   
     $sql->setRowData('mensal', 56.56);
-
+    
     echo $sql->getInstruction();
-    echo"<br>\n"; 
+    
 
 ?>
 </html>
