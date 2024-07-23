@@ -10,10 +10,10 @@
  * pgn 184. 
  */
 
-   abstract class TSqlInstruction{
-    protected $sql; //guarda instrução sql
-    protected $criteria;//guarda objeto criteria
-    protected $entity;
+    abstract class TSqlInstruction{
+    var $sql; //guarda instrução sql
+    var $criteria;//guarda objeto criteria
+    var $entity;
     
 
         // método setEntity define o nome da tabela
@@ -32,8 +32,6 @@
 
         //método getInstruction
         // será declarada apenas nas classes filhas
-
-        //abstract function getInstruction();
         abstract function getInstruction();
         }
 

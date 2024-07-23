@@ -1,5 +1,11 @@
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Modelo inicial para teste em PHP.</title>
+</head>
 
 <?php
 /**
@@ -9,18 +15,8 @@
  * Versão: v2.
  * pgn 188.
  */
-
- 
-/* include_once "app.ado/php_poo-TSqlInsert.php";
- include_once 'app.ado/php_poo-TSqlInstruction.php'; */
-
- function __spl_autoload_register($TSqlInsert){
-
-    if(file_exists("app.ado/{$TSqlInsert}.class.php")){
-        include_once "app.ado/{$classe}.class.php";
-    }
-
-}
+    include_once 'app.ado/php_poo-TSqlInstruction.class.php';
+    include_once 'app.ado/php_poo-TSqlInsert.class.php'; 
 
     //setlocale(LC_NUMERIC, "english");
 
@@ -37,10 +33,7 @@
     $sql->setRowData('mensal', 56.56);
 
     echo $sql->getInstruction();
-    echo"<br>\n";
+    echo"<br>\n"; 
 
-
- 
 ?>
-
 </html>
