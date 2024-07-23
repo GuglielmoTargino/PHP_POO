@@ -17,14 +17,13 @@
 */
 
  //carrega função autoload();
- 
-    include_once 'app.ado/TSqlInstruction.class.php'; 
-    include_once 'app.ado/TExpression.class.php';
-    include_once 'app.ado/Tcriteria.class.php';
-    include_once 'app.ado/TFilter.class.php';
-    include_once 'app.ado/TSqlupdate.class.php';
-  
- 
+
+ function my_autoloader($TSqlInstruction) {
+   include_once 'app.ado/' . $TSqlInstruction . '.class.php';
+}
+
+spl_autoload_register('my_autoloader');
+
  //cria criterio de seleção.
  $criterio=new Tcriteria;
  $criterio->add(new TFilter('id','=','3'));
