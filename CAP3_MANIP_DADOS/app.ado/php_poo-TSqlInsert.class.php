@@ -1,10 +1,16 @@
 <?PHP
 /**
- * Classe inset no banco de dados
- * PG 186
+ * Exercício do livro PHP-POO
+ * Aluno: Guglielmo Targino.
+ * Data: 23jul24.
+ * Versão: v2.
+ * pgn 186
  */
+
 //classe para inseri dados no banco de dados
+//final class TSqlInsert extends TSqlInstruction{
 final class TSqlInsert extends TSqlInstruction{
+    
     public function setRowData($column,$value){
         if(is_string($value)){
             $value=addslashes($value);

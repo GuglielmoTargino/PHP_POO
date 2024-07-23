@@ -5,9 +5,9 @@
 /**
  * programa para inserção de dados no bd 
  * Aluno: Guglielmo Targino.
- * Data: 24abr24.
- * Versão: v0.
- * PG188 do livro PHP-POO.
+ * Data: 23jul24.
+ * Versão: v2.
+ * pgn 188.
  */
 
  
