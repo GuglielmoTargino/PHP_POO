@@ -16,7 +16,7 @@
 
  function __spl_autoload_register($TSqlInsert){
 
-    if(file_exists("app.ado/{}.php")){
+    if(file_exists("app.ado/{$TSqlInsert}.class.php")){
         include_once "app.ado/{$classe}.class.php";
     }
 

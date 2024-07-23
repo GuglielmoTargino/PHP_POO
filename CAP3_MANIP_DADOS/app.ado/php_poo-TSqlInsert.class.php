@@ -10,20 +10,21 @@
 //classe para inseri dados no banco de dados
 //final class TSqlInsert extends TSqlInstruction{
 final class TSqlInsert extends TSqlInstruction{
+    private $columnvalueS;
     
     public function setRowData($column,$value){
         if(is_string($value)){
             $value=addslashes($value);
-            $this->columnValues[$column]="'$value'";
+            $this->columnvalueS[$column]="'$value'";
 
         }else if(is_bool($value)){
-            $this->columnValues[$column]=$value?'TRUE':'FALSE';
+            $this->columnvalueS[$column]=$value?'TRUE':'FALSE';
 
         }else if(isset($value)){
-            $this->columnValues[$column]=$value;
+            $this->columnvalueS[$column]=$value;
 
         }else{
-            $this->columnValues[$column]="NULL";
+            $this->columnvalueS[$column]="NULL";
         }
 
     }
@@ -36,8 +37,8 @@ final class TSqlInsert extends TSqlInstruction{
 
     public function getInstruction(){
         $this->sql="INSERT INTO {$this->entity}(";
-        $columns=implode(',', array_keys($this->columnValues));
-        $values=implode(',', array_values($this->columnValues));
+        $columns=implode(',', array_keys($this->columnvalueS));
+        $values=implode(',', array_values($this->columnvalueS));
         $this->sql.=$columns.')';
         $this->sql.="values({$values})";
 
