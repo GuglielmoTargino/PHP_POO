@@ -14,23 +14,16 @@
  * Data: 23jul24.
  * Versão:v0
  * pgn 191.
- * function __autoload($cla){
-    if(file_exists("app.ado/{$cla}.class.php")){
-        include_once "app.ado/{$cla}.class.php";
-    }
- */
+*/
 
  //carrega função autoload();
-   
-include_once 'app.ado/php_poo-TSqlInstruction.class.php'; 
-include_once 'app.ado/php_poo-TExpression.class.php';
-include_once 'app.ado/php_poo-Tcriteria.class.php';
-include_once 'app.ado/php_poo-TFilter.class.php';
-include_once 'app.ado/php_poo-TSqlupdate.class.php';
-
-
-    
  
+    include_once 'app.ado/php_poo-TSqlInstruction.class.php'; 
+    include_once 'app.ado/php_poo-TExpression.class.php';
+    include_once 'app.ado/php_poo-Tcriteria.class.php';
+    include_once 'app.ado/php_poo-TFilter.class.php';
+    include_once 'app.ado/php_poo-TSqlupdate.class.php';
+  
  
  //cria criterio de seleção.
  $criterio=new Tcriteria;
