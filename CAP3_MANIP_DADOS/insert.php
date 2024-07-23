@@ -15,8 +15,8 @@
  * Versão: v2.
  * pgn 188.
  */
-    include_once 'app.ado/php_poo-TSqlInstruction.class.php';
-    include_once 'app.ado/php_poo-TSqlInsert.class.php'; 
+    include_once 'app.ado/TSqlInstruction.class.php';
+    include_once 'app.ado/TSqlInsert.class.php'; 
 
     //setlocale(LC_NUMERIC, "english");
 

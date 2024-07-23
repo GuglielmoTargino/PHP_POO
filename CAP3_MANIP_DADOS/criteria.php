@@ -16,9 +16,9 @@ Versão: v2
 pgn 182.
 */
 
-include_once 'app.ado/php_poo-TExpression.class.php';
-include_once 'app.ado/php_poo-Tcriteria.class.php';
-include_once 'app.ado/php_poo-TFilter.class.php';
+include_once 'app.ado/TExpression.class.php';
+include_once 'app.ado/Tcriteria.class.php';
+include_once 'app.ado/TFilter.class.php';
 
 // aqui vamos utilizar um operador OR
 
@@ -37,8 +37,6 @@ $arr->add(new TFilter('idade','in',array(24,25,26)));
  */
 $arr=new Tcriteria;
 $arr->add(new TFilter('idade','in',array(24,25,26)));
-
-
 echo $arr->dump();
  
 

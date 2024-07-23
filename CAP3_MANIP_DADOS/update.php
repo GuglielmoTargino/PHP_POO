@@ -18,11 +18,11 @@
 
  //carrega função autoload();
  
-    include_once 'app.ado/php_poo-TSqlInstruction.class.php'; 
-    include_once 'app.ado/php_poo-TExpression.class.php';
-    include_once 'app.ado/php_poo-Tcriteria.class.php';
-    include_once 'app.ado/php_poo-TFilter.class.php';
-    include_once 'app.ado/php_poo-TSqlupdate.class.php';
+    include_once 'app.ado/TSqlInstruction.class.php'; 
+    include_once 'app.ado/TExpression.class.php';
+    include_once 'app.ado/Tcriteria.class.php';
+    include_once 'app.ado/TFilter.class.php';
+    include_once 'app.ado/TSqlupdate.class.php';
   
  
  //cria criterio de seleção.
@@ -43,7 +43,6 @@
  // exibe comando sql
  echo $sql->getInstruction();
  echo "<br>\n";
-
 
 ?>
 </html>

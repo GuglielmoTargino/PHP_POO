@@ -18,8 +18,8 @@
 
 
 //Carrega classes
-include_once 'app.ado/php_poo-TExpression.class.php';
-include_once 'app.ado/php_poo-TFilter.class.php';
+include_once 'app.ado/TExpression.class.php';
+include_once 'app.ado/TFilter.class.php';
 
 // Cria filtros por data (string)
 $filter1=new TFilter('data','=','2024-03-01');
