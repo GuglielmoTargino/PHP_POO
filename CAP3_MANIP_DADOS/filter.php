@@ -8,6 +8,15 @@
 </head>
 
 <?php
+/**
+ * Revisão do exercício do livro PHP-POO
+ * Aluno: Guglielmo Targino
+ * Data: 22jul24
+ * Versão:v2
+ * pgn 76
+ */
+
+
 //Carrega classes
 include_once 'app.ado/php_poo-TExpression.class.php';
 include_once 'app.ado/php_poo-TFilter.class.php';
@@ -25,7 +34,7 @@ echo $filter2->Dump();
 echo"<br>\n";
 
 //Cria filtro por sexo (array)
-$filter3=new TFilter('sexo','in',array('m','f'));
+$filter3=new TFilter('sexo','in',array('M ',' F'));
 echo $filter3->Dump();
 echo"<br>\n";
 

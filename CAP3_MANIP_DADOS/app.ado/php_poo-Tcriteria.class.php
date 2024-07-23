@@ -1,6 +1,11 @@
 <?php
-
-//PG 179
+/**
+ * Revisão de exercício do livro PHP-POO
+ * Aluno: Guglielmo Targino
+ * Data: 22jul24
+ * Versão: v2
+ * pgn 179.
+ */
 
 class Tcriteria extends TExpression{
 
@@ -8,15 +13,15 @@ class Tcriteria extends TExpression{
     private $operators;
     private $properties;
 
-    public function add(TExpression $expression, $operator=self::and_operator){
+    public function add(TExpression $expression, $opera=self::and_operator){
         //na primeira vez não precisa de operador lógico.
         //public function add(TExpression $expression, $operator=self::and_operator){
         if(empty($this->expressions)){
-            unset($operator);
+            unset($operators);
         }
         //agrega o resultado da expressão na lista
         $this->expressions[]=$expression;
-        $this->operators[]=$operator;
+        $this->operators[]=$opera;
     }
 
     //dumper retorna a expressão.
@@ -28,8 +33,8 @@ class Tcriteria extends TExpression{
 
             foreach ($this ->expressions as $i=> $expression) {
 
-                $operator=$this->operators[$i];
-                $result.=$operator.$expression->dump().'';
+                $operador=$this->operators[$i];
+                $result=$operador.$expression->dump().'';
 
             }
             $result=trim($result);

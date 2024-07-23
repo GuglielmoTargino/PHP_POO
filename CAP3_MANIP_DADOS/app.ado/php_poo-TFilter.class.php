@@ -24,7 +24,7 @@ class TFilter extends TExpression{
         //chama a função transforma o valor antes de atribuir
         $this->valor=$this->Transformar($valor);
     }
-
+    //método privado só pode ser convocado de dentro dessa classe.
     private function Transformar($valor){
         //caso seja uma array
         if(is_array($valor)){
@@ -34,7 +34,7 @@ class TFilter extends TExpression{
                 if(is_integer($x)){                    
                     $foo[]=$x;
                 }
-                //se for uma string
+                //se um elemento da array for uma string
                 elseif(is_string($x)){                    
                     $foo[]="'$x'";
                 }
@@ -42,7 +42,7 @@ class TFilter extends TExpression{
 
             //converte  os elementos da array em string 
             //separada por virgula.
-            $result='('.implode(',',$foo).')';
+            $result='('.implode('_',$foo).')';
         }
 
         //caso seja string
