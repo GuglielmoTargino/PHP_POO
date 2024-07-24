@@ -9,12 +9,9 @@
 <body>
     <div id="top">
         <h1>Programação PHP-POO.</h1>
-    </div>
-</body>
 
-<footer>
-    <h2> Estudar sempre é o melhor caminho!</h2>
-</footer>
+
+
 
 
 
@@ -58,6 +55,7 @@
  echo"<br>\n";
 ?>
 
-
+</div>
+</body>
 
 </html>
