@@ -23,19 +23,21 @@
     //no momento em que são instaciadas pelos objetos.
     function my_autoloader($cla) {
         include_once 'app.ado/' . $cla . '.class.php';
-     }
-     
+     }     
      spl_autoload_register('my_autoloader');
 
  //inicia criterio de seleção
- $criteria=new Tcriteria;
- //$criteria->add(new TFilter('nome','like','maria%'));
- $criteria->add(new TFilter('cidade','like','porto%'));
+ $criteria1=new Tcriteria;
+ $criteria1->add(new TFilter('sexo','=','F'));
+ $criteria1->add(new TFilter('serie','=','3'));
 
- 
- $criteria->setProperty('offset',0);//define o intervalo da consulta.
- $criteria->setProperty('limit',10); 
- $criteria->setProperty('order','nome');//ordenação da consulta
+ $criteria2=new Tcriteria;
+ $criteria2->add(new TFilter('sexo','=','M'));
+ $criteria2->add(new TFilter('serie','=','4'));
+
+ $criteria=new Tcriteria;
+ $criteria->add($criteria1,TExpression::or_operator);
+ $criteria->add($criteria2,TExpression::or_operator);
 
  $criteria->setProperty('offset',0);//define o intervalo da consulta.
  $criteria->setProperty('limit',10); 
@@ -46,8 +48,7 @@
  //define entidade/tabela
  $sql->setEntity('aluno');
  //adiciona coluna
- $sql->_addColumn('nome');
- $sql->_addColumn('fone');
+ $sql->_addColumn('*');
  //define criterio de seleção
  $sql->setCriteria($criteria);
  //processa instrução

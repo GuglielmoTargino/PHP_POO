@@ -4,7 +4,7 @@ body{
 div#top{
     width:800px;
     height: 500px;
-    background-color: rgb(235, 230, 230);
+    background-color: rgb(243, 241, 241);
     border-radius: 8px;
     position: absolute;
     margin-top: 40px; 
@@ -15,7 +15,7 @@ div#top{
 h1{
     text-align:left;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(111, 111, 114);
+    color: rgb(104, 104, 105);
     text-decoration: none;
     margin-top: 0px;
     margin-bottom: 0px;
