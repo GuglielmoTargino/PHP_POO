@@ -8,13 +8,8 @@
 
 <body>
     <div id="top">
-        <h1>Programação PHP-POO.</h1>
-
-
-
-
-
-
+        <h1>CAPÍTULO 3</h1>
+        <h2>Manipulação de dados</h2>
 <?php
 /**
  * Exercício do livro PHP-POO
@@ -33,14 +28,14 @@
 
  //inicia criterio de seleção
  $criteria=new Tcriteria;
- $criteria->add(new TFilter('nome','like','maria%'));
+ //$criteria->add(new TFilter('nome','like','maria%'));
  $criteria->add(new TFilter('cidade','like','porto%'));
 
- //define o intervalo da consulta.
- $criteria->setProperty('offset',0);
+ 
+ $criteria->setProperty('offset',0);//define o intervalo da consulta.
  $criteria->setProperty('limit',10);
- //ordenação da consulta
- $criteria->setProperty('order','nome');
+ 
+ $criteria->setProperty('order','nome');//ordenação da consulta
 
  //cria seleção
  $sql=new TSqlSelect;
@@ -48,6 +43,7 @@
  $sql->setEntity('aluno');
  //adiciona coluna
  $sql->_addColumn('nome');
+ $sql->_addColumn('fone');
  //define criterio de seleção
  $sql->setCriteria($criteria);
  //processa instrução
