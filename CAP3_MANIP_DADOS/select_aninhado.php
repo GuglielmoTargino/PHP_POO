@@ -17,7 +17,7 @@
  * Aluno: Guglielmo Targino.
  * Data: 24jul24
  * Versão:v0
- * pgn 197
+ * pgn 198
  */
     //carrega as classes necessárias automaticamente 
     //no momento em que são instaciadas pelos objetos.
@@ -34,8 +34,11 @@
 
  
  $criteria->setProperty('offset',0);//define o intervalo da consulta.
- $criteria->setProperty('limit',10);
- 
+ $criteria->setProperty('limit',10); 
+ $criteria->setProperty('order','nome');//ordenação da consulta
+
+ $criteria->setProperty('offset',0);//define o intervalo da consulta.
+ $criteria->setProperty('limit',10); 
  $criteria->setProperty('order','nome');//ordenação da consulta
 
  //cria seleção
