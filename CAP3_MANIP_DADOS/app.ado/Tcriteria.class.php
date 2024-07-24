@@ -34,7 +34,7 @@ class Tcriteria extends TExpression{
             foreach ($this ->expressions as $i=> $expression) {
 
                 $operador=$this->operators[$i];
-                $result=$operador.$expression->dump().'';
+                $result=$operador.$expression->dump().' ';
 
             }
             $result=trim($result);

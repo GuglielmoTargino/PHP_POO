@@ -12,8 +12,8 @@ PG 173
  abstract class TExpression{
 
     //operadosres
-    const and_operator='and_-_';
-    const or_operator='or_-_';
+    const and_operator='';
+    const or_operator='';
 
     //marca metodo dump sendo obrigatório
     abstract public function dump();
