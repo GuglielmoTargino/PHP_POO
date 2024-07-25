@@ -32,10 +32,15 @@
         //verifica qual drive do banco de dados a ser utilizado
         switch($type){
             case 'pgsq':
-                echo " Banco de dados Postgre!"
+                echo " Banco de dados Postgre!";
+                break;
+            case 'mysql':
+                $conn= new PDO("mysql:host={$host};port=3306;dbname={$name}", $user,$pass);
+                break;
         }
-
-
+        //define o disparo de execessões
+        $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        return $conn;
     }
  }
 
