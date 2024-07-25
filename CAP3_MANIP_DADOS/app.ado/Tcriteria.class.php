@@ -9,9 +9,9 @@
 
 class Tcriteria extends TExpression{
 
-    private $expressions;
-    private $operators;
-    private $properties;
+    private $expressions;//lista de expressões
+    private $operators;//lista de operadores
+    private $properties;//propriedades de criterios
 
     public function add(TExpression $expression, $opera=self::and_operator){
         //na primeira vez não precisa de operador lógico.

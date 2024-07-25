@@ -21,10 +21,13 @@ final class TSqlSelect extends TSqlInstruction{
     {
         //monta a instrução select
         $this->sql='SELECT';
+
         //monta string com nomes de colunas
         $this->sql.=implode(',', $this->columnS);
+
         //adiciona na clausula FROM o nome da tabela
         $this->sql.='FROM'.$this->entity;
+        
         //obtem clausula where do objeto criteria.
         if($this->criteria){
             $expression=$this->criteria->dump();
@@ -35,6 +38,7 @@ final class TSqlSelect extends TSqlInstruction{
             $order=$this->criteria->getProperty('order');
             $limit=$this->criteria->getProperty('limit');
             $offset=$this->criteria->getProperty('offset');
+
             if($order){
                 $this->sql.='ORDER BY'.$order;
             }

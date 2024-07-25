@@ -19,7 +19,7 @@ try{
 
     //Executa o comando SQL
 
-    $dbh->exec("INSERT INTO produto (id_prod,nome_prod,tipo) VALUES (81,'GUGA','kg')");
+    $dbh->exec("INSERT INTO produto (id_prod,nome_prod,tipo) VALUES (82,'GUGA','kg')");
 
     //$sql = 'SELECT * FROM produto ';
 

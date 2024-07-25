@@ -19,28 +19,47 @@
  * Versão:v0.
  * pgn 204 
  */
+
+  //carrega as classes necessárias automaticamente 
+    //no momento em que são instaciadas pelos objetos.
+    function my_autoloader($cla) {
+        include_once 'app.ado/' . $cla . '.class.php';
+     }     
+     spl_autoload_register('my_autoloader');
+
 // cria instrução select
 $sql=new TSqlSelect;
 //define entidade ou tabela.
-$sql->setEntity('famoso');
+$sql->setEntity(' produto ');
 //insere colunas
-$sql->_addColumn('codigo');
-$sql->_addColumn('nome');
+$sql->_addColumn(' nome_prod ');
+//$sql->_addColumn('nome');
+
 //define selecão de busca no select
 $criteria= new Tcriteria;
-$criteria->add(new TFilter('codigo','=','1'));
+$criteria->add(new TFilter(' id_prod ','=',1));
+//$criteria->add(new TFilter('id_prod','=','tipo'));
+
 //atribui o critério de seleção.
-$sql->setCriteria($criteria);
+ $sql->setCriteria($criteria);
+
+ //$criteria->setProperty('offset',0);//define o intervalo da consulta.
+ $criteria->setProperty('id_prod',0);
+ //$order=$this->criteria->getProperty('id_prod');
+
+ 
 
 try{
     //tenta instrução bd MYSQL
     $conn=TConnection::_open('my_livro');
     //executa instrução sql
     $result=$conn->query($sql->getInstruction());
+    
     if($result){
         $row=$result->fetch(PDO::FETCH_ASSOC);
         //mostra dados.
-        echo $row['codigo'].'_'.$row['nome']."\n";
+        echo $row[' id_prod ']."\n";
+        //echo $row[' id_prod '].'_'.$row[' nome_prod ']."\n"
     }
     //fecha conexão
     $conn=null;
