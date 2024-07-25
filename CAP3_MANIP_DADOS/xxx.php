@@ -10,7 +10,7 @@
     <div id="top">
     <h1>CAPÍTULO xx</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>||xx</h2>
+        <h2>| xx</h2>
 <?php
 
 
