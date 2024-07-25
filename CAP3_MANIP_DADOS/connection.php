@@ -37,14 +37,14 @@ $sql->_addColumn(' nome_prod ');
 
 //define selecão de busca no select
 $criteria= new Tcriteria;
-$criteria->add(new TFilter(' id_prod ','=',1));
+$criteria->add(new TFilter(' id_prod ','=',2));
 //$criteria->add(new TFilter('id_prod','=','tipo'));
 
 //atribui o critério de seleção.
  $sql->setCriteria($criteria);
 
  //$criteria->setProperty('offset',0);//define o intervalo da consulta.
- $criteria->setProperty('id_prod',0);
+ //$criteria->setProperty('id_prod',1);
  //$order=$this->criteria->getProperty('id_prod');
 
  
@@ -59,6 +59,7 @@ try{
         $row=$result->fetch(PDO::FETCH_ASSOC);
         //mostra dados.
         echo $row[' id_prod ']."\n";
+        var_dump($row);
         //echo $row[' id_prod '].'_'.$row[' nome_prod ']."\n"
     }
     //fecha conexão
