@@ -1,9 +1,9 @@
 body{
-    background-image: url('git1.jpg');
+    background-image: url('New6.jpg');
 }
 div#top{
-    width:800px;
-    height: 500px;
+    width:740px;
+    height: 350px;
     background-color: rgb(243, 241, 241);
     border-radius: 8px;
     position: absolute;
