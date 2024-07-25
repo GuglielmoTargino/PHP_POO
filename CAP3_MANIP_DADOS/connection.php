@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css"/>
 </head>
 
 <body>
     <div id="top">
     <h1>CAPÍTULO 3</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>||Manipulação de dados</h2>
+        <h2>| Manipulação de dados</h2>
 <?php
 /**
  * Exercício do livro PHP-POO.
@@ -31,39 +31,35 @@
 $sql=new TSqlSelect;
 //define entidade ou tabela.
 $sql->setEntity(' produto ');
-//insere colunas
+//insere colunas a ser exibida no select
+$sql->_addColumn(' tipo ');
 $sql->_addColumn(' nome_prod ');
-//$sql->_addColumn('nome');
+$sql->_addColumn(' id_prod ');
 
-//define selecão de busca no select
+//define clausula where da condição.
 $criteria= new Tcriteria;
-$criteria->add(new TFilter(' id_prod ','=',2));
-//$criteria->add(new TFilter('id_prod','=','tipo'));
+$criteria->add(new TFilter(' id_prod ','=',5));
+
 
 //atribui o critério de seleção.
  $sql->setCriteria($criteria);
 
- //$criteria->setProperty('offset',0);//define o intervalo da consulta.
- //$criteria->setProperty('id_prod',1);
- //$order=$this->criteria->getProperty('id_prod');
-
- 
-
 try{
     //tenta instrução bd MYSQL
-    $conn=TConnection::_open('my_livro');
+    $conn=TConnection::_open('config_conn');
     //executa instrução sql
     $result=$conn->query($sql->getInstruction());
     
     if($result){
         $row=$result->fetch(PDO::FETCH_ASSOC);
         //mostra dados.
-        echo $row[' id_prod ']."\n";
-        var_dump($row);
-        //echo $row[' id_prod '].'_'.$row[' nome_prod ']."\n"
-    }
-    //fecha conexão
+        echo "ID do produto é:".$row['id_prod'].". Nome do produto é:".$row['nome_prod']."\n";
+        //print_r($row);
+    }else{
+        //fecha conexão
     $conn=null;
+    }
+    
 
 }catch(PDOException $e){
     //exibe erro

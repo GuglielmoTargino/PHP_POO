@@ -3,7 +3,7 @@ body{
 }
 div#top{
     width:740px;
-    height: 400px;
+    height: 300px;
     background-color: rgb(243, 241, 241);
     border-radius: 8px;
     position: absolute;
@@ -23,6 +23,6 @@ h1{
 h2{
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 50px;
 }
