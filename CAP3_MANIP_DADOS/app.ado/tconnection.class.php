@@ -12,7 +12,7 @@
     private function __construct(){
     }
     //método open
-    public static function _open($xx){
+    public static function open($xx){
         //teste se existe arquivo de conexão.
         if(file_exists("APP.CONFIG/{$xx}.ini")){
             //lê arquivo ini
