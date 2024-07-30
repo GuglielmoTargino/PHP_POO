@@ -3,12 +3,14 @@
  * Exercício do livro PHP-POO
  * Aluno: Guglielmo Targino.
  * Data: 25jul24
- * Versão:v0
+ * Versão:v2
  * pgn 208
  */
 
  final class TTransaction{
-    private static $conN;
+    private static $conN; //conexão ativa
+    private static $loggeR;// objeto de log
+
 
     //metodo construtor como privado para impedir novas instancias
     private function __construct()
@@ -20,6 +22,8 @@
             self::$conN=TConnection::open($dbase);
                 //inicia transação
                 self::$conN->beginTransaction();
+                //desliga log
+                self::$loggeR=NULL;
 
         }
     }
@@ -45,6 +49,18 @@
             self::$conN=NULL;
         }
 
+    }
+    //define qual log será usado
+    public static function setLogger(TLogger $logger){
+        self::$loggeR=$logger;
+
+    }
+    //armazena arquivo de log
+    public static function log($message){
+        //verifica se existe um log
+        if(self::$loggeR){
+            self::$loggeR->write($message);
+        }
     }
 
  }
