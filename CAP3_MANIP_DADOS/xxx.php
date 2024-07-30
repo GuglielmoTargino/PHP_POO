@@ -8,10 +8,16 @@
 
 <body>
     <div id="top">
-    <h1>CAPÍTULO xx</h1>
+    <h1>CAPÍTULO 3</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| xx</h2>
+        <h2>| Manipulação de dados: 3.3.14-registro de logs</h2>
 <?php
+  //carrega as classes necessárias automaticamente 
+    //no momento em que são instaciadas pelos objetos.
+    function my_autoloader($cla) {
+        include_once 'app.ado/' . $cla . '.class.php';
+     }     
+     spl_autoload_register('my_autoloader');
 
 
 ?>
