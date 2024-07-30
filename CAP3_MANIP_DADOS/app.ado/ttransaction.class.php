@@ -7,7 +7,7 @@
  * pgn 208
  */
 
- final class TTranssaction{
+ final class TTransaction{
     private static $conN;
 
     //metodo construtor como privado para impedir novas instancias

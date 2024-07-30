@@ -10,7 +10,7 @@
     <div id="top">
     <h1>CAPÍTULO 3</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Manipulação de dados xx</h2>
+        <h2>| Manipulação de dados: 3.3.13-controle de transações.</h2>
 <?php
 
 /**
@@ -20,46 +20,56 @@
  * Versão: v0.
  * pgn 210
  */
+   //carrega as classes necessárias automaticamente 
+    //no momento em que são instaciadas pelos objetos.
+    function my_autoloader($cla) {
+        include_once 'app.ado/' . $cla . '.class.php';
+     }
+     
+     spl_autoload_register('my_autoloader');
 
  try{
     // abre a conexão
-    TTranssaction::open('pg_livro');
+    TTransaction::open('config_conn');
     //cria instrução insert
     $sql=new TSqlInsert;
     // define a o nome da entidade
-    $sql->setEntity('famosos');
+    $sql->setEntity('produto');
     //atribui valor da coluna
-    $sql->setRowData('codigo',8);
-    $sql->setRowData('nome','galileu');
+    $sql->setRowData('id_prod',8);
+    //$sql->setRowData('nome','galileu');
 
     // obtem conexão
-    $conn=TTranssaction::get();
+    $conn=TTransaction::get();
     //executa conexão
     $result=$conn->Query($sql->getInstruction());
 
     //cria uma instrução UPDATE
     $sql=new TSqlUpdate;
     //define o nome da entidade;
-    $sql->setEntity('famosos');
+    $sql->setEntity('produto');
     //atribui valor da coluna;
-    $sql->setRowData('nome','galileu');
+    $sql->setRowData('id_prod',8);
+
     //cria criterio de seleção
     $criteria=new Tcriteria;
+
     //obtem a pessoa de codigo 8;
-    $criteria->add(new TFilter('codigo','=','8'));
+    $criteria->add(new TFilter('id_prod','=','8'));
     //atribui o criterio 
     $sql->setCriteria($criteria);
+
     //obtem conexão
-    $conn=TTranssaction::get();
+    $conn=TTransaction::get();
     //executa a instrução
     $result=$conn->Query($sql->getInstruction());
     //fecha a conexão;
-    TTranssaction::close();
+    TTransaction::close();
 
  }catch(Exception $e){
     echo $e->getMessage();
     //desfaz as operações realzadas durante a transação.
-    TTranssaction::rollback();
+    TTransaction::rollback();
  }
 
  

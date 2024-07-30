@@ -46,7 +46,7 @@ $criteria->add(new TFilter(' id_prod ','=',5));
 
 try{
     //tenta instrução bd MYSQL
-    $conn=TConnection::_open('config_conn');
+    $conn=TConnection::open('config_conn');
     //executa instrução sql
     $result=$conn->query($sql->getInstruction());
     
