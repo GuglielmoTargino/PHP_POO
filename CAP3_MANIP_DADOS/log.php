@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 <meta charset="utf-8">
-<title>Modelo inicial para teste em PHP.</title>
+<title>Testes PHP.</title>
 <link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
 </head>
 
@@ -37,9 +37,10 @@
         //cria instrução inserte
         $sql=new TSqlInsert;
         //define o nome da entidade
-        $sql->setEntity('produto');
+        $sql->setEntity('entrada');
         //atribui valor da coluna
         $sql->setRowData('codigo',9);
+
         //obtem conexão
         $conn= TTransaction::get();
         //executa conexão
