@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../STYLE/estilo_avulso.css" media="screen" />
+
 </head>
 
 <body>
@@ -13,6 +14,7 @@
         <h2>||Manipulação de dados</h2>
 <?php
 /**
+ * <link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
  * Exercício do livro PHP-POO
  * Aluno: Guglielmo Targino.
  * Data: 24jul24
