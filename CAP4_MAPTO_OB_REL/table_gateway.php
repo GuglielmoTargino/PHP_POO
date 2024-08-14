@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../STYLE/estilo_avulso.css" media="screen" />
 </head>
 
 <body>
     <div id="top">
-    <h1>CAPÍTULO 3</h1>
+    <h1>CAPÍTULO 4</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Manipulação de dados: 3.3.14-registro de logs</h2>
+        <h2>| Mapeamento Objeto Relacional: 4.4.1 Table Data Gateway</h2>
 <?php
   //carrega as classes necessárias automaticamente 
     //no momento em que são instaciadas pelos objetos.

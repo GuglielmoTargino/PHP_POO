@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../STYLE/estilo_avulso.css" media="screen" />
 </head>
 
 <body>
