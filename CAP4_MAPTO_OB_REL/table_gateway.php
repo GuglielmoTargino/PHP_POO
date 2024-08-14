@@ -12,12 +12,37 @@
         <h1>PHP-Programando com Orientação a Objetos</h1>
         <h2>| Mapeamento Objeto Relacional: 4.4.1 Table Data Gateway</h2>
 <?php
-  //carrega as classes necessárias automaticamente 
-    //no momento em que são instaciadas pelos objetos.
-    function my_autoloader($cla) {
-        include_once 'app.ado/' . $cla . '.class.php';
-     }     
-     spl_autoload_register('my_autoloader');
+
+  /**
+   * Exercício do livro PHP-POO
+   * Aluno: Guglielmo Targino
+   * Data: 14ago24
+   * Versão: v0
+   * pgn 247
+   */
+
+   class ProdutoGateway{   
+
+    function Insert($id, $descricao, $estoque, $preco_custo){
+      //cria instrução SQL
+      $sql="INSERT INTO Produto (id, descricao, estoque, preco_custo)"."VALUES ($id,$descricao, $estoque, $preco_custo)";
+       //instancia obejeto PDO.
+       $conn=new PDO('sqlte:produtos.db');
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       //executa instrucao SQL
+       $conn->exec($sql);
+       unset($conn);
+    }   
+
+}
+
+   //Instancia objeto Gateway
+
+   $gateway=new ProdutoGateway;
+
+   $gateway->Insert(1,'vinho',10,10);
+
+  
 
 
 ?>
