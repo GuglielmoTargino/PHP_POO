@@ -19,7 +19,6 @@
      }     
      spl_autoload_register('my_autoloader');
 
-
 ?>
 
 </div>
