@@ -10,7 +10,7 @@
     <div id="top">
     <h1>FORMULÁRIO</h1>
         <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Modelo de formulário</h2>
+        <h2>| Operação com números</h2>
 <?php
 
 /**
@@ -19,11 +19,30 @@
  * Data:14ago24,
  * Versão: v0,
  */
-     $nome=$_POST['nome'];
+     $n1=isset($_POST['name_number1']) ? $_POST['name_number1']:0;
+     $n2=isset($_POST['name_number2'])?$_POST['name_number2']:0;
 
-        echo $nome;
+     if($n1 and $n2){
 
+        if ($_POST['name_submit'] == 'Somar') {
+            // Código para salvar os dados
+            echo "{$n1} + {$n2} é igual a:".$n1+$n2;
+        } elseif ($_POST['name_submit'] == 'Subtrair') {
+            // Código para enviar os dados
+            echo "{$n1} - {$n2} é igual a:".$n1-$n2;
+        } elseif ($_POST['name_submit'] == 'Multiplicar') {
+            // Código para excluir os dados
+            echo"{$n1} X {$n2} é igual a:".$n1*$n2;    
+
+        }
+    }else{
+        echo 'Informe todos os valores por favor';
+    }
+
+  
 ?>
+</br>
+<a href="formulario_modelo.php">Voltar</a>
 
 </div>
 </body>
