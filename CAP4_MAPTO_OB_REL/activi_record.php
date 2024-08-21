@@ -18,7 +18,7 @@
    * Aluno: Guglielmo Targino
    * Data: 14ago24
    * Versão: v0
-   * pgn 247
+   * pgn 258
    */
 
    class ProdutoGateway{   

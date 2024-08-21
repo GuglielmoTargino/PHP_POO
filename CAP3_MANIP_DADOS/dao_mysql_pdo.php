@@ -21,14 +21,12 @@ try{
 
     $dbh->exec("INSERT INTO produto (id_prod,nome_prod,tipo) VALUES (82,'GUGA','kg')");
 
-    //$sql = 'SELECT * FROM produto ';
+    /*
 
-   // $sql = 'DELETE FROM login where senha=3440';
-
-    //$sql="UPDATE `login` SET `senha`='3030' WHERE usuario='andrea'";
-
-    //Comandos para exibir resultado na tela
-    /*     
+    $sql = 'SELECT * FROM produto ';
+    $sql = 'DELETE FROM login where senha=3440';
+    $sql="UPDATE `login` SET `senha`='3030' WHERE usuario='andrea'";
+    Comandos para exibir resultado na tela  
    foreach ($dbh->query($sql) as $row) {
         print $row['id_prod'] . "\n";
         print $row['tipo'] . "\n";       
