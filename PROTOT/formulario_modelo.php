@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Exrcicio modelo de formulario tirado da internet
+<!--Exrcicio modelo de formulario
 Aluno: Guglielmo Targino
 Data:20jul24
 Versão: v3
@@ -26,10 +26,6 @@ Versão: v3
       
       <input type="submit" name="name_submit" value="Enviar" id="id_enviar" >
       <input type="submit" name="name_submit" value="Excluir" id="id_subtrair" >
-      <!--
-      
-      <input type="submit" name="name_submit" id="id_multiplicar" value="Multiplicar">
-        -->
   </form> 
 <?php
 
@@ -39,5 +35,4 @@ Versão: v3
 </body>
 
 </html>
-
 
