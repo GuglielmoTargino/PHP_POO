@@ -11,12 +11,12 @@
  */
 
  // abre o arquivo
-$fp=fopen("C:\Users\Guglielmo H T\Desktop\Rascunho.txt","w");
-fwrite($fp,"GUGA mais que LEGAL!\n GUGA mais que LEGAL!\nGUGA mais que LEGAL!\nGUGA mais que LEGAL!");
+$fp=fopen("C:/Users/Guglielmo H T/Desktop/teste_php.txt","r");
+//fwrite($fp,"GUGA mais que LEGAL!");
 
-//$cx=fgets($fp,40);
-//echo $cx;
-fclose($fp);
+$cx=fgets($fp,400);
+echo $cx;
+//fclose($fp);
  
 
 //
