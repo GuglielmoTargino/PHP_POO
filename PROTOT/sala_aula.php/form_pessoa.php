@@ -30,7 +30,7 @@ Versão:v0
         <input type="radio" name="name_sexo" id="id_femi" value="fem"><label for="id_femi"> Feminino</label>
       </fieldset>  
 
-      <input type="submit" name="name_verificar" value="verificar" id="id_verificar">
+      <input type="submit" name="name_verificar" value="value_verificar" id="id_verificar">
 
   </form> 
 
