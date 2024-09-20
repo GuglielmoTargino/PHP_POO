@@ -10,7 +10,7 @@ Valor de IMC maior ou igual a 18,5 e menor que 25,0: adulto com peso adequado.
 Valor de IMC maior ou igual a 25,0 e menor que 30,0: adulto com sobrepeso.
 Valor de IMC maior ou igual a 30,0: adulto com obesidade.
 
-Prof: João Vagner.
+Prof: João Vagner Pereira.
 Aluno: Guglielmo Henriques Targino
 RA: 2222104623
 Data:06set24
