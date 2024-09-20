@@ -50,5 +50,5 @@ echo "Valor total se usar galões de 3,6 litros R$: $precoGalao";
 
 ?>
 </br>
-<a href="form_calc_tinta.php">Voltar</a>
+<a href="atv2_form_calc_tinta.php">Voltar</a>
 </html>

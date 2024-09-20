@@ -30,7 +30,7 @@ Versão:v0
     <div id="top">
     <h1>Formulário para calcular quantidade de tinta.</h1>       
 
-    <form name="form1" method="get" action="calc_tinta.php"> </br>
+    <form name="form1" method="get" action="atv2_calc_tinta.php"> </br>
       <label>Informe a largura da parede em metros</label>
       <input type="number" name="name_altura" id="id_altura"></br>
       <label>Informe a altura da parede em metros.</label>
