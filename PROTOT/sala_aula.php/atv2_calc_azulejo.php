@@ -25,38 +25,30 @@ Versão:v0
 
 $alt_pa = $_GET["nam_alt_pa"];
 $larg_pa = $_GET["nam_larg_pa"];
-$alt_az = $_GET["nam_alt_az"];
-$larg_az = $_GET["nam_larg_az"];
+$alt_az = ($_GET["nam_alt_az"])/100;
+$larg_az = ($_GET["nam_larg_az"])/100;
 $tipo_az = $_GET["name_tipo"];
+
+echo $alt_az;
+echo"</br>";
+echo $larg_az;
 
 
 $area_pa = ceil($alt_pa * $larg_pa);//pega altura e multiplica por largura e joga na variavel area
-$area_az = ceil($alt_az * $larg_az);//pega altura e multiplica por largura e joga na variavel area
+$area_az =($alt_az * $larg_az);//pega altura e multiplica por largura e joga na variavel area
 
-echo $area_pa;
-echo $tipo_az;
+$azulejos = ceil($area_pa / $area_az);
+$cx_az=ceil($azulejos);
+
+echo $area_az;
 
 
-$lata = ceil($litros / 18);
-$precolata = ceil($lata * 80);
 
-$galao = ceil($litros / 3.6);
-$precoGalao = ceil($galao * 25);
+echo "Quantidade necessária de azulejos é $alt_az";
+echo"<br>";
+echo "Quantidade necessária de azulejos é $area_az";
+echo"<br>";
 
-echo "A área  para base de cálculo é $areaSobra m²";
-echo"<br>";
-echo "Tintas disponíveis em latas de 18 litros e galões de 3,6 litros";
-echo"<br>";
-echo"<br>";
-echo "Quantidade necessária de tinta em litros: $litros";
-echo"<br>";
-echo "Quantidade de latas de 18 litros: $lata.";
-echo"<br>";
-echo "Quantidade de galões de 3,6 litros: $galao.";
-echo "<br>";
-echo "Valor total se usar latas de 18 litros R$:$precolata";
-echo"<br>";
-echo "Valor total se usar galões de 3,6 litros R$: $precoGalao";
 
 ?>
 </br>
