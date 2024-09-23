@@ -17,37 +17,39 @@ exemplo: 100 cm x 100 cm = 10000 cm2
 Prof: João Vagner Pereira.
 Aluno: Guglielmo Henriques Targino
 RA: 2222104623
-Data:19set24
+Data:23set24
 Parte 2/2.
-Versão:v0
+Versão:v1
 -->
 <?php
 
-$alt_pa = $_GET["nam_alt_pa"];
-$larg_pa = $_GET["nam_larg_pa"];
-$alt_az = ($_GET["nam_alt_az"])/100;
-$larg_az = ($_GET["nam_larg_az"])/100;
+$alt_pa = $_GET["nam_alt_pa"];//pega o valor digitado em metro.
+$larg_pa = $_GET["nam_larg_pa"];//pega o valor digitado em metro.
+$alt_az = ($_GET["nam_alt_az"]);//pega o valor digitado em centímetro.
+$larg_az = ($_GET["nam_larg_az"]);//pega o valor digitado em centímetro.
 $tipo_az = $_GET["name_tipo"];
 
-echo $alt_az;
+$area_pa = ceil($alt_pa * $larg_pa);//pega altura e multiplica por largura e joga na variavel area_pa
+$area_az =($alt_az * $larg_az)/10000;//pega altura e multiplica por largura e joga na variavel area_az
+                                        //e converte para metros.
+$azulejos =ceil($area_pa / $area_az);//calcula quantidade necessária inteiras de azulejos.
+
+$cx_az= ceil($area_az*$azulejos);//calcula a quantidade inteiras em caixas de 1m2.
 echo"</br>";
-echo $larg_az;
 
-
-$area_pa = ceil($alt_pa * $larg_pa);//pega altura e multiplica por largura e joga na variavel area
-$area_az =($alt_az * $larg_az);//pega altura e multiplica por largura e joga na variavel area
-
-$azulejos = ceil($area_pa / $area_az);
-$cx_az=ceil($azulejos);
-
-echo $area_az;
-
-
-
-echo "Quantidade necessária de azulejos é $alt_az";
+echo "Quantidade necessária de azulejos é $azulejos";
 echo"<br>";
-echo "Quantidade necessária de azulejos é $area_az";
+
+echo "Quantidade necessária de caixas de 1m2 é $cx_az";
 echo"<br>";
+
+if ($tipo_az=='lis'){
+    echo "Tipo de azulejo escolhido foi Liso.";
+}else{
+    echo "Tipo de azulejo escolhido foi Decorado.";
+}
+
+
 
 
 ?>

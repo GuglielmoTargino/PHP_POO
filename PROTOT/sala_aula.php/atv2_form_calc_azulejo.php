@@ -17,7 +17,7 @@ exemplo: 100 cm x 100 cm = 10000 cm2
 Prof: João Vagner Pereira.
 Aluno: Guglielmo Henriques Targino
 RA: 2222104623
-Data:19set24
+Data:23set24
 Parte 1/2.
 Versão:v0
 -->
@@ -40,11 +40,11 @@ Versão:v0
       </fieldset> 
 
       <label>Informe a largura da parede em metro</label>
-      <input type="number" name="nam_alt_pa" id="id_alt_pa min="0" max="300" step="0.1"></br>
+      <input type="number" name="nam_alt_pa" id="id_alt_pa" min="0" max="300" step="0.1"></br>
       <label>Informe a altura da parede em metro.</label>
       <input type="number" name="nam_larg_pa" id="id_larg_pa" min="0" max="300" step="0.1"></br>
       <label>Informe a largura do azulejo em centímetro</label>
-      <input type="number" name="nam_alt_az" id="id_alt_az min="0" max="300" step="0.1"></br>
+      <input type="number" name="nam_alt_az" id="id_alt_az" min="0" max="300" step="0.1"></br>
       <label>Informe a altura do azulejo em centímetro.</label>
       <input type="number" name="nam_larg_az" id="id_larg_az" min="0" max="300" step="0.1"></br>
 
