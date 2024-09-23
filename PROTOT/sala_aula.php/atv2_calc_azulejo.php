@@ -19,38 +19,51 @@ Aluno: Guglielmo Henriques Targino
 RA: 2222104623
 Data:23set24
 Parte 2/2.
-Versão:v1
+Versão:v2
 -->
 <?php
 
 $alt_pa = $_GET["nam_alt_pa"];//pega o valor digitado em metro.
 $larg_pa = $_GET["nam_larg_pa"];//pega o valor digitado em metro.
-$alt_az = ($_GET["nam_alt_az"]);//pega o valor digitado em centímetro.
-$larg_az = ($_GET["nam_larg_az"]);//pega o valor digitado em centímetro.
 $tipo_az = $_GET["name_tipo"];
+$tam_az = $_GET["name_tam"];
 
-$area_pa = ceil($alt_pa * $larg_pa);//pega altura e multiplica por largura e joga na variavel area_pa
-$area_az =($alt_az * $larg_az)/10000;//pega altura e multiplica por largura e joga na variavel area_az
-                                        //e converte para metros.
+$area_pa = $alt_pa * $larg_pa;//pega altura e multiplica por largura e joga na variavel area_pa
+
+if($tam_az=='20x20'){
+    $area_az = 0.04;
+}
+
+if($tam_az=='30x30'){
+    $area_az = 0.09;
+}
+
+if($tam_az=='30x40'){
+    $area_az = 0.12;
+}
+
+if($tam_az=='40x40'){
+    $area_az = 0.16;
+}
+
 $azulejos =ceil($area_pa / $area_az);//calcula quantidade necessária inteiras de azulejos.
-
-$cx_az= ceil($area_az*$azulejos);//calcula a quantidade inteiras em caixas de 1m2.
+$cx_az=ceil($area_az*$azulejos); //calcula a quantidade inteira de caixas de 1m2.
 echo"</br>";
 
-echo "Quantidade necessária de azulejos é $azulejos";
+echo "A quantidade necessária de azulejos é $azulejos";
 echo"<br>";
 
-echo "Quantidade necessária de caixas de 1m2 é $cx_az";
+echo "A quantidade necessária de caixas de 1m2 é $cx_az";
+echo"<br>";
+
+echo "O tamanho do azulejo selecionado foi $tam_az cm";
 echo"<br>";
 
 if ($tipo_az=='lis'){
-    echo "Tipo de azulejo escolhido foi Liso.";
+    echo "O tipo de azulejo escolhido foi Liso.";
 }else{
-    echo "Tipo de azulejo escolhido foi Decorado.";
+    echo "O tipo de azulejo escolhido foi Decorado.";
 }
-
-
-
 
 ?>
 </br>

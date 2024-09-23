@@ -33,13 +33,9 @@ Versão:v0
     <h1>Formulário para calcular a quantidade de azulejo para revestimento.</h1>       
 
     <form name="form1" method="get" action="atv2_calc_azulejo.php"> </br>
-    <fieldset>
-        <legend>Selecione o tipo de azulejo:</legend>
-        <input type="radio" name="name_tipo" id="id_liso" value="lis" checked><label for="id_liso">Liso</label>
-        <input type="radio" name="name_tipo" id="id_deco" value="dec"><label for="id_deco">Decorado</label>
-      </fieldset> 
+<!--
 
-      <label>Informe a largura da parede em metro</label>
+ <label>Informe a largura da parede em metro</label>
       <input type="number" name="nam_alt_pa" id="id_alt_pa" min="0" max="300" step="0.1"></br>
       <label>Informe a altura da parede em metro.</label>
       <input type="number" name="nam_larg_pa" id="id_larg_pa" min="0" max="300" step="0.1"></br>
@@ -47,6 +43,27 @@ Versão:v0
       <input type="number" name="nam_alt_az" id="id_alt_az" min="0" max="300" step="0.1"></br>
       <label>Informe a altura do azulejo em centímetro.</label>
       <input type="number" name="nam_larg_az" id="id_larg_az" min="0" max="300" step="0.1"></br>
+    
+-->
+
+    <label>Informe a largura da parede em metro</label>
+      <input type="number" name="nam_alt_pa" id="id_alt_pa" min="0" max="300" step="0.1"></br>
+      <label>Informe a altura da parede em metro.</label>
+      <input type="number" name="nam_larg_pa" id="id_larg_pa" min="0" max="300" step="0.1"></br>
+      <fieldset>
+        <legend>Selecione o tipo de azulejo:</legend>
+        <input type="radio" name="name_tipo" id="id_liso" value="lis" checked><label for="id_liso">Liso</label>
+        <input type="radio" name="name_tipo" id="id_deco" value="dec"><label for="id_deco">Decorado</label>
+      </fieldset> 
+      <fieldset>
+        <legend>Selecione o tamanho do azulejo:</legend>
+        <input type="radio" name="name_tam" id="id_2020" value="20x20" checked><label for="id_liso">20X20 cm</label>
+        <input type="radio" name="name_tam" id="id_3030" value="30x30"><label for="id_deco">30x30 cm</label>
+        <input type="radio" name="name_tam" id="id_3040" value="30x40"><label for="id_liso">30x40 cm</label>
+        <input type="radio" name="name_tam" id="id_4040" value="40x40"><label for="id_deco">40x40 cm</label>
+      </fieldset> 
+
+      
 
       <input type="submit" value="Calcular" id="id_verificar">
     </form> 
