@@ -53,7 +53,7 @@ echo"</br>";
 echo "A quantidade necessária de azulejos é $azulejos";
 echo"<br>";
 
-echo "A quantidade necessária de caixas de 1m2 é $cx_az";
+echo "A quantidade de caixas de 1m2 é $cx_az";
 echo"<br>";
 
 echo "O tamanho do azulejo selecionado foi $tam_az cm";
