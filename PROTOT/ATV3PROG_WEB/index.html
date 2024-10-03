@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET" action="dados.php">
+        <label>Nome: </label>
+        <input type="text" name="nome" placeholder="Digite Nome Completo"><br><br>
+        <label>Endereço: </label>
+        <input type="text" name="end" placeholder="Digite Endereço"><br><br>
+        <label>Telefone: </label>
+        <input type="tel" name="tel" placeholder="Digite Telefone"><br><br>
+        <label>Data de Nasc. </label>
+        <input type="date" name="data" placeholder="Digite a altura"><br><br>
+        <label>Sexo: </label>
+        <select id="tamanhoAzulejo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="nd">Não declarado</option>
+        </select><br><br>
+        <label>Escolaridade</label>
+        <select id="escolaridade" name="escolaridade" required>
+            <option value="medio">Medio</option>
+            <option value="fundamental">Fundamental</option>
+            <option value="superior">Superior</option>
+        </select>
+        <br><br>
+        <input type="submit" name="ler" value="Gravar">
+        <input type="reset" name="reset" value="reset">
+
+    </form>
+</body>
+</html>
