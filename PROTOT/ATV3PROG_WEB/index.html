@@ -1,5 +1,21 @@
 
 <!DOCTYPE html>
+<!--	
+Atividade III - salvando dados de formulário e agradecendo ( vale nota 0 a 10).
+Crie um formulário completo com nome, endereço, telefone, nascimento, sexo, escolaridade com botão SUBMIT e RESET.
+Ao enviar pelo SUBMIT o arquivo PHP salva em um arquivo loguer.txt e envia de volta uma pagina de agradecimento.
+Esta pagina de agradecimento deverá estar salva em arquivo HTML.
+O PHP lê este arquivo e envia ( echo) para o cliente que enviou o formulário.
+
+Prof: João Vagner Pereira.
+Aluno: Guglielmo Henriques Targino.
+RA:2222104623.
+Data: 03out24.
+Versão: v2.
+
+Parte 1/3.
+-->
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -17,19 +33,19 @@
         <label>Data de Nasc. </label>
         <input type="date" name="data" placeholder="Digite a altura"><br><br>
         <label>Sexo: </label>
-        <select id="tamanhoAzulejo" name="sexo" required>
+        <select id="id_sex" name="sexo" required>
             <option value="masculino">Masculino</option>
             <option value="feminino">Feminino</option>
             <option value="nd">Não declarado</option>
         </select><br><br>
         <label>Escolaridade</label>
-        <select id="escolaridade" name="escolaridade" required>
+        <select id="id_esc" name="escolaridade" required>
             <option value="medio">Medio</option>
             <option value="fundamental">Fundamental</option>
             <option value="superior">Superior</option>
         </select>
         <br><br>
-        <input type="submit" name="ler" value="Gravar">
+        <input type="submit" name="cad" value="Gravar">
         <input type="reset" name="reset" value="reset">
 
     </form>
