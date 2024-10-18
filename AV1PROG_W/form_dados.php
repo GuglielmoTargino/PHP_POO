@@ -17,7 +17,7 @@ Versão: v3
         <h1>PHP-Programando com Orientação a Objetos</h1>
         <h2>| Operação com BD</h2>
 
-  <form name="form1" method="post" action="../AV1PROG_W/dao_mysql2.php"> </br>
+  <form name="form1" method="post" action="../AV1PROG_W/dao_mysql.php"> </br>
 
       <label> Digite o nome do pet</label>
       <input type="text" name="name_number1" id="id_number1"></br>
