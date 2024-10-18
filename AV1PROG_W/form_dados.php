@@ -17,17 +17,17 @@ Versão: v3
         <h1>PHP-Programando com Orientação a Objetos</h1>
         <h2>| Operação com BD</h2>
 
-  <form name="form1" method="post" action="../PROTOT/dao_mysql2.php"> </br>
+  <form name="form1" method="post" action="../AV1PROG_W/dao_mysql2.php"> </br>
 
       <label> Digite o nome do pet</label>
       <input type="text" name="name_number1" id="id_number1"></br>
       <label> Digite a raça do pet</label>
       <input type="text" name="name_number2" id="id_number2"></br>
       
-      <input type="submit" name="name_submit" value="alterar" id="id_alterar">
-      <input type="submit" name="name_submit" value="buscar" id="id_buscar" >
-      <input type="submit" name="name_submit" value="buscar" id="id_buscar" >
-      <input type="submit" name="name_submit" value="buscar" id="id_buscar" >
+      <input type="submit" name="name_submit" value="Alterar" id="id_alterar">
+      <input type="submit" name="name_submit" value="Buscar" id="id_buscar" >
+      <input type="submit" name="name_submit" value="Inserir" id="id_inserir" >
+      <input type="submit" name="name_submit" value="Excluir" id="id_excluir" >
 
   </form>
 
