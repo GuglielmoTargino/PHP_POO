@@ -69,8 +69,35 @@ try{
     die();
 }
 */
+/*
+$dsn = 'mysql:dbname=test;host=localhost';
+$user = 'ght';
+$password = '4004';
+
+try{
+    //instacia classe para conexao com o BD.
+    $dbh = new PDO($dsn, $user, $password);
+    //Executa o comando SQL    
+    //$dbh->exec("DELETE FROM pets where nome='joe'");
+    $dbh->exec("INSERT INTO pets (nome,tipo) VALUES ('$n1','$n2')");
+    //$dbh->exec("UPDATE `pets` SET `nome`='guga' WHERE tipo='gato'");     
+
+    Comandos para exibir resultado na tela
+    $sql = 'SELECT * FROM pets';        
+   foreach ($dbh->query($sql) as $row) {
+        print $row['nome'] . "\n";
+        print $row['tipo'] . "\n";       
+    }  
+}catch(PDOException $e){
+    print "Erro de conexa".$e->getMessage()."\n";
+    //encerra a conexão com o BD
+    die();
+}
+*/
+
 ?>
 
 </br>
-<a href="form_dados.php">Voltar</a>
+
+<a href="form_dados.php"><img id="voltar" src="../AV1PROG_W/images/botao_voltar.png"></a>
 </html>
