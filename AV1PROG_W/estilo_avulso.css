@@ -1,0 +1,29 @@
+body{
+   background-color: rgb(100, 134, 134);
+}
+div#top{
+    width:740px;
+    height: 500px;
+    background-color: rgb(243, 241, 241);
+    border-radius: 8px;
+    position: absolute;
+    
+    margin-top: 90px; 
+    margin-left: 390px;
+    padding: 10px;
+   
+}
+h1{
+    text-align:left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(104, 104, 105);
+    text-decoration: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h2{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}

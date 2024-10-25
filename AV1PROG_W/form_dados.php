@@ -8,22 +8,22 @@ Versão: v3
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="../STYLE/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="estilo_avulso.css" media="screen" />
 </head>
 
 <body>
     <div id="top">
     <h1>FORMULÁRIO</h1>
-        <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Operação com BD</h2>
+        <h1>PHP-Gravando arquivos no Banco de Dados(CRUD).</h1>
+        <h2>| Cadastro de Pets</h2>
 
   <form name="form1" method="post" action="../AV1PROG_W/dao_mysql2.php"> </br>
 
-      <label> Digite o nome do pet</label>
+      <label>Digite o nome do pet</label>
       <input type="text" name="name_number1" id="id_number1" style="width: 120px; height: 30px; margin:5px;"></br>
-      <label> Digite a raça do pet</label>
+      <label>Digite a espécie do pet</label>
       <input type="text" name="name_number2" id="id_number2" style="width: 120px; height: 30px; margin:5px;" ></br>
-      <label> Digite o número de ID do pet</label>
+      <label>Digite o número de ID do pet</label>
       <input type="number" name="name_number3" id="id_number3" style="width: 60px; height: 30px; margin:5px;"></br>
       
      
