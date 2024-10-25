@@ -17,20 +17,21 @@ if($n1 and $n2){
     $user = 'ght';
     $password = '4004';
     try{    
-        
         $dbh = new PDO($dsn, $user, $password); //instacia classe para conexao com o BD.
         if ($_POST['name_submit'] == 'Alterar') {
             // Código para alterar dados
             $dbh->exec("UPDATE `pets` SET nome='$n1' , tipo='$n2' WHERE id='$n3'");
+           
     
         } else if ($_POST['name_submit'] == 'Buscar'){            
-            $sql= "SELECT nome, tipo FROM pets where id='$n3'";
+            $sql= "SELECT nome, tipo, id FROM pets where id='$n3'";
             $stmt = $dbh->prepare($sql);
             $stmt->execute();  
             echo "<table border='1'>
             <tr>
                 <th>Nome</th>
                 <th>Tipo</th>
+                <th>id</th>
             </tr>"; 
 
             //foreach ($dbh->query($sql) as $row)        
@@ -41,6 +42,7 @@ if($n1 and $n2){
             echo "<tr>
                     <td>" . $row["nome"] . "</td>
                     <td>" . $row["tipo"] . "</td>
+                    <td>" . $row["id"] . "</td>
                     </tr>";
 
         }
@@ -67,13 +69,20 @@ if($n1 and $n2){
         echo "Operação com sucesso.";
         }
     }catch(PDOException $e){
-        print "Erro de conexa".$e->getMessage()."\n";
-        //encerra a conexão com o BD
+
+        //$mens='SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipo2' in 'field list'';
+        //SQLSTATE[HY000] [1045] Access denied for user 'ght'@'localhost' (using password: YES) 
+        //SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'
+        print "Erro de conexao_".$e->getMessage()."\n";
+            //encerra a conexão com o BD
         die();
-    }      
+
+        }
+        
+         
 }else{
     echo 'Informe todos os valores por favor';
-}
+    }
 ?>
 <a href="form_dados.php"><img id="voltar" src="../AV1PROG_W/images/botao_voltar.png"></a>
 </html>
