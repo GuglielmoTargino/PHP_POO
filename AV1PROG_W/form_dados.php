@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<!--Exrcicio modelo de formulario
-Aluno: Guglielmo Targino
-Data:20jul24
-Versão: v3
+<!--AV1 da disciplina de programação web
+Prof: João Vagner Pereira da Silva.
+Aluno: Guglielmo Henriques Targino.
+RA:2222104623.
+Data: 03out24.
+Versão: v1.
+Arquivo parte 1/2 (form.php)
+
 -->
 <html lang="pt-br">
 <head>
