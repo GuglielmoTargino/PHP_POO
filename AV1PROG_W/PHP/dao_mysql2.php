@@ -73,5 +73,5 @@ if($n1 and $n2){
     echo 'Informe todos os valores por favor';
     }
 ?>
-<a href="form_dados.php"><img id="voltar" src="../AV1PROG_W/images/botao_voltar.png"></a>
+<a href="form_dados.php"><img id="voltar" src="../images/botao_voltar.png"></a>
 </html>

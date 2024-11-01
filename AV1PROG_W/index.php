@@ -3,25 +3,31 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="estilo/estilo_avulso.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="CSS/estilo_avulso.css" media="screen" />
 </head>
 
 <body>
     <div id="top">
-    <h1>CAPÍTULO 3</h1>
-        <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Manipulação de dados: 3.3.14-registro de logs</h2>
+    <h1>Sistema CRUD</h1>
+        <h1>PHP-Programação WEB</h1>
+        <h2>| Tela de login de usuário</h2>
+
+        <form name="form1" method="post" action="PHP/form_dados.php">
+          <label>Digite o nome de usuário</label>
+          <input type="text" name="txt" id="txt"><br>
+          <label>Digite a senha</label>
+          <input type="number" name="num" id="num"><br>
+          <input type="submit" name="user" value="logar">
+
+
+        </form>
 <?php
-  //carrega as classes necessárias automaticamente 
-    //no momento em que são instaciadas pelos objetos.
-    function my_autoloader($cla) {
-        include_once 'app.ado/' . $cla . '.class.php';
-     }     
-     spl_autoload_register('my_autoloader');
+
 
 ?>
 
 </div>
+
 </body>
 
 </html>
