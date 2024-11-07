@@ -26,24 +26,34 @@
     function Insert($id, $descricao, $estoque, $preco_custo){
       //cria instrução SQL
       $sql="INSERT INTO Produto (id, descricao, estoque, preco_custo)"."VALUES ($id,$descricao, $estoque, $preco_custo)";
-       //instancia obejeto PDO.
+       //instancia objeto PDO.
        $conn=new PDO('sqlte:produtos.db');
        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
+
     }   
+
+    function Update($id, $descricao, $estoque, $preco_custo){
+      //cria instrução SQL
+      $sql="UPDATE Produto set descricao='$descricao'".
+      "estoque='$estoque', preco_custo='$preco_custo'".
+      "WHERE id='$id'";
+       //instancia objeto PDO.
+       $conn=new PDO('sqlte:produtos.db');
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       //executa instrucao SQL
+       $conn->exec($sql);
+       unset($conn);
+
+    } 
 
 }
 
-   //Instancia objeto Gateway
-
+   //Instancia objeto Gateway e testa inserte
    $gateway=new ProdutoGateway;
-
-   $gateway->Insert(1,'vinho',10,10);
-
-  
-
+   $gateway->Insert(1,'vinho',10,10); 
 
 ?>
 
