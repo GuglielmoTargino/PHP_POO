@@ -28,7 +28,7 @@ include_once 'DAO_CP4/dao_cp4.php';
          //executa instrucao SQL
          $conn->exec($sql);
          unset($conn);
-    }   
+    }
 
     function Update($id, $nome, $tipo, $peso){
       $conn=ConexaoBd();
@@ -74,9 +74,18 @@ include_once 'DAO_CP4/dao_cp4.php';
        //print_r($data). "<br>";
 
        foreach ($data as $row) {
-         print_r($row);
-         echo "<br>"; // Pula uma linha entre cada array para maior clareza
+         echo "<div>";
+         foreach ($row as $key => $value) {
+             echo "<strong>$key:</strong> $value<br>";
+         }
+         echo "</div><hr>"; // Linha horizontal entre cada array
      }
+
+
+       //foreach ($data as $row) {
+         //print_r($row);
+         //echo "<br>"; // Pula uma linha entre cada array para maior clareza
+     //}
 
 
 

@@ -15,7 +15,8 @@ function ConexaoBd(){
     try {
         $conn = new PDO('mysql:host=localhost;dbname=test', 'ght', '4004');
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Conexão OK <br>";
+        echo "Conexão OK";
+        echo "<br>";
         return $conn;
     } catch (PDOException $e) {
         echo "Erro na conexão: " . $e->getMessage();
@@ -23,25 +24,6 @@ function ConexaoBd(){
     }
 
 }
-
-
-/*
-
-$dsn = 'mysql:dbname=test;host=localhost';
-$user = 'ght';
-$password = '4004';
-
-try{ 
-    $dbh = new PDO($dsn, $user, $password); //instacia classe para conexao com o BD.
-    echo "conexão ok";    
-                    
-      
-}catch(PDOException $e){    
-    print "Erro de conexao_".$e->getMessage()."\n";
-    //encerra a conexão com o BD
-    die();
-    }       
-*/
          
 ?>
 
