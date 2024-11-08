@@ -14,12 +14,12 @@ Versão: v3
 
 
 <?php
-   include_once '../CP4MAPTO_OBJ_REL/CP4CLASSES/table_gateway.class.php'; 
+   include_once 'table_gateway.class.php'; 
     
     echo "PHP LEGAL!";  
     
     $gateway= new ProdutoGateway;
-    $gateway->Insert(1,'vinho',20,30);
+    $gateway->Insert(14,'vinho','dog',3);
     
 ?>
 

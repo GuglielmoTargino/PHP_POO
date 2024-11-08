@@ -16,24 +16,26 @@
    * Versão: v0
    * pgn 247
    */
-include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
+include_once 'DAO_CP4/dao_cp4.php';
 
-   class ProdutoGateway{   
+   class ProdutoGateway{     
 
-    function Insert($id, $descricao, $estoque, $preco_custo){
-      //cria instrução SQL
-      $sql="INSERT INTO Produto (id, descricao, estoque, preco_custo)"."VALUES ($id,$descricao, $estoque, $preco_custo)";
-       //instancia objeto PDO.
+      function Insert($id, $nome, $tipo, $peso){
+         $conn=ConexaoBd();
+         //cria instrução SQL
+         $sql="INSERT INTO pets (id, nome, tipo, peso) VALUES ('$id','$nome', '$tipo', '$peso')";
+         //instancia objeto PDO.
 
-       //$conn=new PDO('sqlte:produtos.db');
-       //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+         //$conn=new PDO('sqlte:produtos.db');
+         //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
-       //executa instrucao SQL
-       $conn->exec($sql);
-       unset($conn);
+         //executa instrucao SQL
+         $conn->exec($sql);
+         unset($conn);
     }   
 
     function Update($id, $descricao, $estoque, $preco_custo){
+      $conn=ConexaoBd();
       //cria instrução SQL
       $sql="UPDATE Produto set descricao='$descricao'".
       "estoque='$estoque', preco_custo='$preco_custo'".
@@ -47,6 +49,7 @@ include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
     } 
 
     function Delete($id){
+      $conn=ConexaoBd();
       //cria instrução SQL
       $sql="DELETE FROM Produto WHERE id='$id'";
        //instancia objeto PDO.
@@ -58,6 +61,7 @@ include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
     }
 
     function getObject($id){
+      $conn=ConexaoBd();
       //cria instrução SQL
       $sql="SELECT* FROM Produto WHERE id='$id'";
        //instancia objeto PDO.
@@ -71,6 +75,7 @@ include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
     }
 
     function getObjects(){
+      $conn=ConexaoBd();
       //cria instrução SQL
       $sql="SELECT* FROM Produt";
        //instancia objeto PDO.
@@ -83,6 +88,7 @@ include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
        return $data;
     }
 }
+
 ?>
 </body>
 

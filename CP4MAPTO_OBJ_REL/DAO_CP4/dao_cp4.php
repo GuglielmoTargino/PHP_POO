@@ -10,15 +10,20 @@ Versão: v1.
 */
 
 
+function ConexaoBd(){
 
+    try {
+        $conn = new PDO('mysql:host=localhost;dbname=test', 'ght', '4004');
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Conexão realizada com sucesso!";
+        return $conn;
+    } catch (PDOException $e) {
+        echo "Erro na conexão: " . $e->getMessage();
+       unset($conn);
+    }
 
-try {
-    $conn = new PDO('mysql:host=localhost;dbname=test', 'ght', '4004');
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexão realizada com sucesso!";
-} catch (PDOException $e) {
-    echo "Erro na conexão: " . $e->getMessage();
 }
+
 
 /*
 
