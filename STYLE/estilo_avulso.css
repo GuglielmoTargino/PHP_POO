@@ -1,6 +1,5 @@
 body{
-    background-image: url('New9.jpg');
-    backface-visibility: hidden;
+   background-color: aliceblue;
 }
 div#top{
     width:740px;

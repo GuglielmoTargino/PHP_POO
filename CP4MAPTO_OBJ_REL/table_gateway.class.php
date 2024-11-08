@@ -7,10 +7,6 @@
 </head>
 
 <body>
-    <div id="top">
-    <h1>CAPÍTULO 4</h1>
-        <h1>PHP-Programando com Orientação a Objetos</h1>
-        <h2>| Mapeamento Objeto Relacional: 4.4.1 Table Data Gateway</h2>
 <?php
 
   /**
@@ -20,6 +16,7 @@
    * Versão: v0
    * pgn 247
    */
+include_once '../CP4MAPTO_OBJ_REL/DAO_CP4/dao_cp4.php';
 
    class ProdutoGateway{   
 
@@ -27,8 +24,10 @@
       //cria instrução SQL
       $sql="INSERT INTO Produto (id, descricao, estoque, preco_custo)"."VALUES ($id,$descricao, $estoque, $preco_custo)";
        //instancia objeto PDO.
-       $conn=new PDO('sqlte:produtos.db');
-       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+       //$conn=new PDO('sqlte:produtos.db');
+       //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
@@ -83,16 +82,8 @@
        unset($conn);
        return $data;
     }
-
 }
-
-   //Instancia objeto Gateway e testa inserte
-   $gateway=new ProdutoGateway;
-   $gateway->Insert(1,'vinho',10,10); 
-
 ?>
-
-</div>
 </body>
 
 </html>

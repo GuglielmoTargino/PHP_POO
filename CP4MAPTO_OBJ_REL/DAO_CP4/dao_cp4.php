@@ -10,13 +10,25 @@ Versão: v1.
 */
 
 
+
+
+try {
+    $conn = new PDO('mysql:host=localhost;dbname=test', 'ght', '4004');
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Conexão realizada com sucesso!";
+} catch (PDOException $e) {
+    echo "Erro na conexão: " . $e->getMessage();
+}
+
+/*
+
 $dsn = 'mysql:dbname=test;host=localhost';
 $user = 'ght';
 $password = '4004';
 
 try{ 
     $dbh = new PDO($dsn, $user, $password); //instacia classe para conexao com o BD.
-    echo "conexão ok";
+    echo "conexão ok";    
                     
       
 }catch(PDOException $e){    
@@ -24,6 +36,7 @@ try{
     //encerra a conexão com o BD
     die();
     }       
+*/
          
 ?>
 
