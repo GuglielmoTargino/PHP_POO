@@ -32,7 +32,6 @@
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
-
     }   
 
     function Update($id, $descricao, $estoque, $preco_custo){
@@ -46,8 +45,31 @@
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
-
     } 
+
+    function Delete($id){
+      //cria instrução SQL
+      $sql="DELETE FROM Produto WHERE id='$id'";
+       //instancia objeto PDO.
+       $conn=new PDO('sqlte:produtos.db');
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       //executa instrucao SQL
+       $conn->exec($sql);
+       unset($conn);
+    }
+
+    function getObject($id){
+      //cria instrução SQL
+      $sql="SELECT* FROM Produto WHERE id='$id'";
+       //instancia objeto PDO.
+       $conn=new PDO('sqlte:produtos.db');
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       //executa instrucao SQL
+       $resu=$conn->query($sql);
+       $data=$resu->fetch(PDO::FETCH_ASSOC);
+       unset($conn);
+       return $data;
+    }
 
 }
 
