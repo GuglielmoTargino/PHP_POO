@@ -71,12 +71,19 @@ include_once 'DAO_CP4/dao_cp4.php';
        //executa instrucao SQL
        $resu=$conn->query($sql);
        $data=$resu->fetchAll (PDO::FETCH_ASSOC);
-       print_r($data). "<br>";
-       unset($conn);
-       return $data;
-    }
-}
+       //print_r($data). "<br>";
 
+       foreach ($data as $row) {
+         print_r($row);
+         echo "<br>"; // Pula uma linha entre cada array para maior clareza
+     }
+
+
+
+    }
+    
+}
+   
 ?>
 </body>
 

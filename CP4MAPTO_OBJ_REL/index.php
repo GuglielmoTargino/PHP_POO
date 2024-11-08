@@ -14,16 +14,14 @@ Versão: v3
 
 
 <?php
-   include_once 'table_gateway.class.php'; 
-    
-    echo "PHP LEGAL!";  
+   include_once 'table_gateway.class.php';
     
     $gateway= new ProdutoGateway;
     //$gateway->Insert(184,'vinho','dog',3);
     //$gateway->Delete(14);
     //$gateway->Update(5,'guga','leo',74)
-    $gateway->getObject('dog');
-    //$gateway->getObjects();
+    //$gateway->getObject('dog');
+    $gateway->getObjects();
    
     
 ?>

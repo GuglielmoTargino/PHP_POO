@@ -15,7 +15,7 @@ function ConexaoBd(){
     try {
         $conn = new PDO('mysql:host=localhost;dbname=test', 'ght', '4004');
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Conexão realizada com sucesso!";
+        echo "Conexão OK <br>";
         return $conn;
     } catch (PDOException $e) {
         echo "Erro na conexão: " . $e->getMessage();
