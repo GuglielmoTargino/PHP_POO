@@ -71,6 +71,19 @@
        return $data;
     }
 
+    function getObjects(){
+      //cria instrução SQL
+      $sql="SELECT* FROM Produt";
+       //instancia objeto PDO.
+       $conn=new PDO('sqlte:produtos.db');
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+       //executa instrucao SQL
+       $resu=$conn->query($sql);
+       $data=$resu->fetchAll (PDO::FETCH_ASSOC);
+       unset($conn);
+       return $data;
+    }
+
 }
 
    //Instancia objeto Gateway e testa inserte
