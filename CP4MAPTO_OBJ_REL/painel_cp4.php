@@ -19,7 +19,12 @@ Versão: v3
     echo "PHP LEGAL!";  
     
     $gateway= new ProdutoGateway;
-    $gateway->Insert(14,'vinho','dog',3);
+    //$gateway->Insert(184,'vinho','dog',3);
+    //$gateway->Delete(14);
+    //$gateway->Update(5,'guga','leo',74)
+    $gateway->getObject('dog');
+    //$gateway->getObjects();
+   
     
 ?>
 

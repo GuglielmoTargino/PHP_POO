@@ -23,26 +23,17 @@ include_once 'DAO_CP4/dao_cp4.php';
       function Insert($id, $nome, $tipo, $peso){
          $conn=ConexaoBd();
          //cria instrução SQL
-         $sql="INSERT INTO pets (id, nome, tipo, peso) VALUES ('$id','$nome', '$tipo', '$peso')";
-         //instancia objeto PDO.
-
-         //$conn=new PDO('sqlte:produtos.db');
-         //$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+         $sql="INSERT INTO pets (id, nome, tipo, peso) VALUES ($id,'$nome', '$tipo', $peso)";
 
          //executa instrucao SQL
          $conn->exec($sql);
          unset($conn);
     }   
 
-    function Update($id, $descricao, $estoque, $preco_custo){
+    function Update($id, $nome, $tipo, $peso){
       $conn=ConexaoBd();
       //cria instrução SQL
-      $sql="UPDATE Produto set descricao='$descricao'".
-      "estoque='$estoque', preco_custo='$preco_custo'".
-      "WHERE id='$id'";
-       //instancia objeto PDO.
-       $conn=new PDO('sqlte:produtos.db');
-       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+      $sql="UPDATE pets set nome='$nome', tipo='$tipo', peso='$peso' where id=$id";
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
@@ -51,10 +42,8 @@ include_once 'DAO_CP4/dao_cp4.php';
     function Delete($id){
       $conn=ConexaoBd();
       //cria instrução SQL
-      $sql="DELETE FROM Produto WHERE id='$id'";
-       //instancia objeto PDO.
-       $conn=new PDO('sqlte:produtos.db');
-       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+      $sql="DELETE FROM pets WHERE id=$id";
+
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);
@@ -63,27 +52,26 @@ include_once 'DAO_CP4/dao_cp4.php';
     function getObject($id){
       $conn=ConexaoBd();
       //cria instrução SQL
-      $sql="SELECT* FROM Produto WHERE id='$id'";
-       //instancia objeto PDO.
-       $conn=new PDO('sqlte:produtos.db');
-       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+      $sql="SELECT* FROM pets WHERE tipo='$id'";
+
        //executa instrucao SQL
        $resu=$conn->query($sql);
        $data=$resu->fetch(PDO::FETCH_ASSOC);
        unset($conn);
+       echo "Nome: " . $data['tipo'] . "<br>";
+       //print_r($data). "<br>";
        return $data;
     }
 
     function getObjects(){
       $conn=ConexaoBd();
       //cria instrução SQL
-      $sql="SELECT* FROM Produt";
-       //instancia objeto PDO.
-       $conn=new PDO('sqlte:produtos.db');
-       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+      $sql="SELECT* FROM pets";
+
        //executa instrucao SQL
        $resu=$conn->query($sql);
        $data=$resu->fetchAll (PDO::FETCH_ASSOC);
+       print_r($data). "<br>";
        unset($conn);
        return $data;
     }
