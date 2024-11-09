@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Exrcicio modelo de formulario
 Aluno: Guglielmo Targino
-Data:20jul24
+Data:09nov24
 Versão: v3
 pg254-257
 -->
@@ -15,11 +15,12 @@ pg254-257
 
 
 <?php
+include_once 'row_gateway.class.php';
 
 
 
 function testa2(){
-    include_once 'row_gateway.class.php';
+    
     $objeto= new ProdutoGateway2;
 
 
@@ -33,11 +34,10 @@ function testa2(){
 
 
 function testa1(){
-    include_once 'row_gateway.class.php';
 
     $objeto= new ProdutoGateway2;
 
-    $objeto->id=55;
+    $objeto->id=45;
     $objeto->nome='kaka';
     $objeto->tipo='ave';
     $objeto->peso=50;
@@ -47,7 +47,7 @@ function testa1(){
     
 
 
-testa2();
+testa1();
 
 
    
