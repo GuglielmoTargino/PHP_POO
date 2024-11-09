@@ -12,11 +12,11 @@
   /**
    * Exercício do livro PHP-POO
    * Aluno: Guglielmo Targino
-   * Data: 14ago24
+   * Data: 08nov24
    * Versão: v0
-   * pgn 247
+   * pgn 250
    */
-include_once 'DAO_CP4/dao_cp4.php';
+include_once '../DAO_CP4/dao_cp4.php';
 
    class ProdutoGateway{ 
     

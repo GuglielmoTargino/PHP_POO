@@ -16,14 +16,27 @@
    * Versão: v0
    * pgn 247
    */
-include_once 'DAO_CP4/dao_cp4.php';
+include_once '../DAO_CP4/dao_cp4.php';
 
-   class ProdutoGateway{     
+   class ProdutoGateway{  
+      
+      private $data;
 
-      function Insert($id, $nome, $tipo, $peso){
+      function __get($prop)
+      {
+         return $this->data[$prop];
+      }
+
+      function __set($prop, $value)
+      {
+         $this->data[$prop]=$value;
+      }
+
+      function Insert(){
          $conn=ConexaoBd();
          //cria instrução SQL
-         $sql="INSERT INTO pets (id, nome, tipo, peso) VALUES ($id,'$nome', '$tipo', $peso)";
+         $sql="INSERT INTO pets (id, nome, tipo, peso)".
+         "VALUES ('{$this->id}','{$this->nome}','{$this->tipo}','{$this->peso}')";
 
          //executa instrucao SQL
          $conn->exec($sql);
@@ -71,9 +84,19 @@ include_once 'DAO_CP4/dao_cp4.php';
        //executa instrucao SQL
        $resu=$conn->query($sql);
        $data=$resu->fetchAll (PDO::FETCH_ASSOC);
-       //print_r($data). "<br>";
-
        foreach ($data as $row) {
+         print_r($row);
+         echo "<br>"; // Pula uma linha entre cada array para maior clareza
+         }
+       
+
+      
+      /*
+
+       
+       
+
+          foreach ($data as $row) {
          echo "<div>";
          foreach ($row as $key => $value) {
              echo "<strong>$key:</strong> $value<br>";
@@ -81,13 +104,7 @@ include_once 'DAO_CP4/dao_cp4.php';
          echo "</div><hr>"; // Linha horizontal entre cada array
      }
 
-
-       //foreach ($data as $row) {
-         //print_r($row);
-         //echo "<br>"; // Pula uma linha entre cada array para maior clareza
-     //}
-
-
+     */
 
     }
     
