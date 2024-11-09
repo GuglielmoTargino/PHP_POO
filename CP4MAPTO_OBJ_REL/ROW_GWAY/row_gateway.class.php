@@ -45,10 +45,10 @@ class ProdutoGateway2{
 
 
 
-    function Update($id, $nome, $tipo, $peso){
+    function Update(){
       $conn=ConexaoBd();
       //cria instrução SQL
-      $sql="UPDATE pets set nome='$nome', tipo='$tipo', peso='$peso' where id=$id";
+      $sql="UPDATE pets set nome='{$this->nome}', tipo='{$this->tipo}', peso='{$this->peso}' where id={$this->id}";
        //executa instrucao SQL
        $conn->exec($sql);
        unset($conn);

@@ -3,7 +3,7 @@
 Aluno: Guglielmo Targino
 Data:20jul24
 Versão: v3
-pg250
+pg254-257
 -->
 <html lang="pt-br">
 <head>
@@ -15,37 +15,39 @@ pg250
 
 
 <?php
-   //include_once 'table_gateway.class.php';
 
-   /* Aqui passa um objeto como parametro.
 
-   include_once 'data_transf.class.php';
-   include_once 'produto.class.php';
 
-   $objeto= new Produto;
+function testa2(){
+    include_once 'row_gateway.class.php';
+    $objeto= new ProdutoGateway2;
 
-   $objeto->id=123;
-   $objeto->nome='kaka';
-   $objeto->tipo='ave';
-   $objeto->peso=50;
-   $gateway->Insert($objeto);
 
-   */
+    $objeto->id=55;
+    $objeto->nome='lila';
+    $objeto->tipo='ave';
+    $objeto->peso=50; 
+    $objeto->Update();    
+
+}
+
 
 function testa1(){
     include_once 'row_gateway.class.php';
-    //include_once 'produto2.class.php';
 
     $objeto= new ProdutoGateway2;
 
-    $objeto->id=51;
+    $objeto->id=55;
     $objeto->nome='kaka';
     $objeto->tipo='ave';
     $objeto->peso=50;
     $objeto->Insert();
 
-}
-testa1();
+}   
+    
+
+
+testa2();
 
 
    
