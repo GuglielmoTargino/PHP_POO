@@ -9,7 +9,6 @@ Data: 08nov24
 Versão: v1.
 */
 
-
 function ConexaoBd(){
 
     try {

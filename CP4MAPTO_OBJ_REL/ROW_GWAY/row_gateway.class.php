@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>Modelo inicial para teste em PHP.</title>
-<link rel="stylesheet" type="text/css" href="../STYLE/estilo_avulso.css" media="screen" />
 </head>
 
 <body>
@@ -18,11 +17,12 @@
    */
 include_once '../DAO_CP4/dao_cp4.php';
 
-   class ProdutoGateway{  
-      
-      private $data;
 
-      function __get($prop)
+class ProdutoGateway2{ 
+   private $data;
+
+   function __get($prop)
+
       {
          return $this->data[$prop];
       }
@@ -42,6 +42,8 @@ include_once '../DAO_CP4/dao_cp4.php';
          $conn->exec($sql);
          unset($conn);
     }
+
+
 
     function Update($id, $nome, $tipo, $peso){
       $conn=ConexaoBd();
