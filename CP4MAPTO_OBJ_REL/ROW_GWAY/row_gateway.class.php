@@ -27,12 +27,12 @@ class ProdutoGateway2{
          return $this->data[$prop];
       }
 
-      function __set($prop, $value)
+   function __set($prop, $value)
       {
          $this->data[$prop]=$value;
       }
 
-      function Insert(){
+   function Insert(){
          $conn=ConexaoBd();
          //cria instrução SQL
          $sql="INSERT INTO pets (id, nome, tipo, peso)".
@@ -45,7 +45,7 @@ class ProdutoGateway2{
 
 
 
-    function Update(){
+   function Update(){
       $conn=ConexaoBd();
       //cria instrução SQL
       $sql="UPDATE pets set nome='{$this->nome}', tipo='{$this->tipo}', peso='{$this->peso}' where id={$this->id}";
@@ -54,43 +54,44 @@ class ProdutoGateway2{
        unset($conn);
     } 
 
-    function Delete($id){
-      $conn=ConexaoBd();
-      //cria instrução SQL
-      $sql="DELETE FROM pets WHERE id=$id";
+   function Delete($id){
+         $conn=ConexaoBd();
+         //cria instrução SQL
+         $sql="DELETE FROM pets WHERE id=$id";
 
        //executa instrucao SQL
-       $conn->exec($sql);
-       unset($conn);
+         $conn->exec($sql);
+         unset($conn);
     }
 
-    function getObject($id){
-      $conn=ConexaoBd();
-      //cria instrução SQL
-      $sql="SELECT* FROM pets WHERE tipo='$id'";
+   function getObject($id){
+         $conn=ConexaoBd();
+         //cria instrução SQL
+         $sql="SELECT* FROM pets WHERE id='$id'";
 
        //executa instrucao SQL
-       $resu=$conn->query($sql);
-       $data=$resu->fetch(PDO::FETCH_ASSOC);
-       unset($conn);
-       echo "Nome: " . $data['tipo'] . "<br>";
+         $resu=$conn->query($sql);
+         $data=$resu->fetch(PDO::FETCH_ASSOC);
+         unset($conn);
+         echo "Nome: " . $data['nome'] . "<br>";
        //print_r($data). "<br>";
-       return $data;
+         return $data;
     }
 
-    function getObjects(){
-      $conn=ConexaoBd();
-      //cria instrução SQL
-      $sql="SELECT* FROM pets";
+   function getObjects(){
+         $conn=ConexaoBd();
+         //cria instrução SQL
+         $sql="SELECT* FROM pets";
 
        //executa instrucao SQL
-       $resu=$conn->query($sql);
-       $data=$resu->fetchAll (PDO::FETCH_ASSOC);
-       foreach ($data as $row) {
-         print_r($row);
-         echo "<br>"; // Pula uma linha entre cada array para maior clareza
-         }
-       
+         $resu=$conn->query($sql);
+         $data=$resu->fetchAll (PDO::FETCH_ASSOC);
+         foreach ($data as $row) {
+            print_r($row);
+            echo "<br>"; // Pula uma linha entre cada array para maior clareza         
+      }
+
+  
 
       
       /*

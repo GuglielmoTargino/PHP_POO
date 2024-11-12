@@ -19,35 +19,30 @@ include_once 'row_gateway.class.php';
 
 
 
-function testa2(){
-    
-    $objeto= new ProdutoGateway2;
 
 
-    $objeto->id=55;
-    $objeto->nome='lila';
-    $objeto->tipo='ave';
-    $objeto->peso=50; 
-    $objeto->Update();    
 
+function testa1(ProdutoGateway2 $objeto){   
+    $objeto->Insert();  
+}   
+
+function testa2(ProdutoGateway2 $objeto,$x){
+    $objeto->Update($x);
 }
 
+function testa3(ProdutoGateway2 $objeto,$x){   
+    $objeto->getObject($x); 
 
-function testa1(){
-
-    $objeto= new ProdutoGateway2;
-
-    $objeto->id=45;
-    $objeto->nome='kaka';
-    $objeto->tipo='ave';
-    $objeto->peso=50;
-    $objeto->Insert();
-
-}   
+}
     
+$objeto= new ProdutoGateway2;
 
+$objeto->id=47;
+$objeto->nome='mina';
+$objeto->tipo='gata';
+$objeto->peso=50;
 
-testa1();
+testa3($objeto,$objeto->id);
 
 
    
