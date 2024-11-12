@@ -13,24 +13,43 @@
    * Aluno: Guglielmo Targino
    * Data: 14ago24
    * Versão: v0
-   * pgn 247
+   * pg261-265
    */
 include_once '../DAO_CP4/dao_cp4.php';
 
 
-class ProdutoGateway2{ 
-   private $data;
+final class Produto2{ 
+   private $descricao;
+   private $estoque;
+   private $preco_custo;
 
-   function __get($prop)
 
-      {
-         return $this->data[$prop];
-      }
+   public function __construct($descricao,$estoque,$preco_custo)
+   {
+      $this->descricao=$descricao;
+      $this->estoque=$$estoque;
+      $this->preco_custo=$preco_custo;      
+   }
 
-   function __set($prop, $value)
-      {
-         $this->data[$prop]=$value;
-      }
+   public function getDescricao()
+   {     
+         $this->descricao;
+   }
+}
+
+final class Venda{
+   private $id;
+   private $Itens;
+}
+final class Mapper{
+
+
+}
+
+
+
+//==============================================
+
 
    function Insert(){
          $conn=ConexaoBd();
@@ -44,39 +63,6 @@ class ProdutoGateway2{
     }
 
 
-
-   function Update(){
-      $conn=ConexaoBd();
-      //cria instrução SQL
-      $sql="UPDATE pets set nome='{$this->nome}', tipo='{$this->tipo}', peso='{$this->peso}' where id={$this->id}";
-       //executa instrucao SQL
-       $conn->exec($sql);
-       unset($conn);
-    } 
-
-   function Delete($id){
-         $conn=ConexaoBd();
-         //cria instrução SQL
-         $sql="DELETE FROM pets WHERE id=$id";
-
-       //executa instrucao SQL
-         $conn->exec($sql);
-         unset($conn);
-    }
-
-   function getObject($id){
-         $conn=ConexaoBd();
-         //cria instrução SQL
-         $sql="SELECT* FROM pets WHERE id='$id'";
-
-       //executa instrucao SQL
-         $resu=$conn->query($sql);
-         $data=$resu->fetch(PDO::FETCH_ASSOC);
-         unset($conn);
-         echo "Nome: " . $data['nome'] . "<br>";
-       //print_r($data). "<br>";
-         return $data;
-    }
 
    function getObjects(){
          $conn=ConexaoBd();
@@ -101,7 +87,6 @@ class ProdutoGateway2{
 
     }
     
-}
    
 ?>
 </body>

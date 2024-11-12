@@ -15,7 +15,7 @@ pg254-257
 
 
 <?php
-include_once 'row_gateway.class.php';
+include_once 'data_map.class.php';
 
 function testa1(ProdutoGateway2 $objeto){   
     $objeto->Insert(); //INSERIR 
