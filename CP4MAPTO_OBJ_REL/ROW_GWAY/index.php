@@ -17,37 +17,32 @@ pg254-257
 <?php
 include_once 'row_gateway.class.php';
 
-
-
-
-
-
 function testa1(ProdutoGateway2 $objeto){   
-    $objeto->Insert();  
+    $objeto->Insert(); //INSERIR 
 }   
 
 function testa2(ProdutoGateway2 $objeto,$x){
-    $objeto->Update($x);
+    $objeto->Update($x);//ATUALIZAR
 }
 
 function testa3(ProdutoGateway2 $objeto,$x){   
-    $objeto->getObject($x); 
+    $objeto->getObject($x); //SELECT
 }
 function testa4(ProdutoGateway2 $objeto,$x){   
-    $objeto->getObjects(); 
+    $objeto->getObjects(); //SELECT ALL
 }
-    
+function testa5(ProdutoGateway2 $objeto,$x){   
+    $objeto->Delete($x); //DELETE
+}
+
 $objeto= new ProdutoGateway2;
 
-$objeto->id=47;
+$objeto->id=99;
 $objeto->nome='mina';
 $objeto->tipo='gata';
 $objeto->peso=50;
 
-testa4($objeto,$objeto->id);
-
-
-   
+testa4($objeto,$objeto->id);   
     
 ?>
 
