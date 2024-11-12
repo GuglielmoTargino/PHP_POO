@@ -32,7 +32,9 @@ function testa2(ProdutoGateway2 $objeto,$x){
 
 function testa3(ProdutoGateway2 $objeto,$x){   
     $objeto->getObject($x); 
-
+}
+function testa4(ProdutoGateway2 $objeto,$x){   
+    $objeto->getObjects(); 
 }
     
 $objeto= new ProdutoGateway2;
@@ -42,7 +44,7 @@ $objeto->nome='mina';
 $objeto->tipo='gata';
 $objeto->peso=50;
 
-testa3($objeto,$objeto->id);
+testa4($objeto,$objeto->id);
 
 
    

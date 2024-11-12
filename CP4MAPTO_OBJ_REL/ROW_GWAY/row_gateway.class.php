@@ -89,25 +89,15 @@ class ProdutoGateway2{
          foreach ($data as $row) {
             print_r($row);
             echo "<br>"; // Pula uma linha entre cada array para maior clareza         
-      }
-
-  
-
-      
-      /*
-
-       
-       
-
-          foreach ($data as $row) {
+         }     
+         /*  foreach ($data as $row) {
          echo "<div>";
          foreach ($row as $key => $value) {
              echo "<strong>$key:</strong> $value<br>";
          }
          echo "</div><hr>"; // Linha horizontal entre cada array
-     }
-
-     */
+         }  
+         */  
 
     }
     
