@@ -37,56 +37,57 @@ final class Produto2{
    }
 }
 
+
 final class Venda{
    private $id;
-   private $Itens;
+   private $itens;
+
+   function __construct($id){
+      $this->id=$id;
+   }
+
+   function getId(){
+      return $this->id;
+   }
+
+   public function addItem($qtd, Produto2 $produto2){
+      $this->itens[]=array($qtd, $produto2);
+
+   }
+
+   public function getItens(){
+      return $this->itens;
+   }
 }
 final class Mapper{
 
+   function Insert(Venda $venda){
+      $id=$venda->getId();
+      $date=date("y-m-d");
+      // insere a venda no banco de dados 
+      $sql="INSERT INTO venda(id,data) value('id','$date')";
+      echo $sql."<br>\n";
 
+      //percorre os itens vendidos
+      foreach($venda->getItens() as $item){
+         $qtd=$item[0];
+         $produto2=$item[1];
+         $descricao=$produto2->getDescricao();
+
+         // insere os itens da venda no banco de dados 
+         $sql="INSERT INTO venda(id,data) value('id','$date')";
+         echo $sql."<br>\n";
+
+      }
+   }
 }
 
+//instancia um objeto da classe Venda
+$venda=new Venda(1000);
 
+//adiciona um elemento 
 
-//==============================================
-
-
-   function Insert(){
-         $conn=ConexaoBd();
-         //cria instrução SQL
-         $sql="INSERT INTO pets (id, nome, tipo, peso)".
-         "VALUES ('{$this->id}','{$this->nome}','{$this->tipo}','{$this->peso}')";
-
-         //executa instrucao SQL
-         $conn->exec($sql);
-         unset($conn);
-    }
-
-
-
-   function getObjects(){
-         $conn=ConexaoBd();
-         //cria instrução SQL
-         $sql="SELECT* FROM pets";
-
-       //executa instrucao SQL
-         $resu=$conn->query($sql);
-         $data=$resu->fetchAll (PDO::FETCH_ASSOC);
-         foreach ($data as $row) {
-            print_r($row);
-            echo "<br>"; // Pula uma linha entre cada array para maior clareza         
-         }     
-         /*  foreach ($data as $row) {
-         echo "<div>";
-         foreach ($row as $key => $value) {
-             echo "<strong>$key:</strong> $value<br>";
-         }
-         echo "</div><hr>"; // Linha horizontal entre cada array
-         }  
-         */  
-
-    }
-    
+$venda->addItem(3,new Produto2('vinho',10,20));
    
 ?>
 </body>
