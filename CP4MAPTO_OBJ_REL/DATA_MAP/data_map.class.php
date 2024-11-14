@@ -50,8 +50,8 @@ final class Venda{
       return $this->id;
    }
 
-   public function addItem($qtd, Produto2 $produto2){
-      $this->itens[]=array($qtd, $produto2);
+   public function addItem($quantidade, Produto2 $produto2){
+      $this->itens[]=array($quantidade, $produto2);
 
    }
 
@@ -65,17 +65,17 @@ final class Mapper{
       $id=$venda->getId();
       $date=date("y-m-d");
       // insere a venda no banco de dados 
-      $sql="INSERT INTO venda(id,data) value('id','$date')";
+      $sql="INSERT INTO venda(id,data) value('$id','$date')";
       echo $sql."<br>\n";
 
       //percorre os itens vendidos
       foreach($venda->getItens() as $item){
-         $qtd=$item[0];
+         $quantidade=$item[0];
          $produto2=$item[1];
          $descricao=$produto2->getDescricao();
 
          // insere os itens da venda no banco de dados 
-         $sql="INSERT INTO venda(id,data) value('id','$date')";
+         $sql="INSERT INTO venda_items(ref_venda,produto,quantidade) value('$id','$descricao', '$quantidade')";
          echo $sql."<br>\n";
 
       }
