@@ -61,7 +61,7 @@ function testa2($X,$Y){
 (operação,valor) 1-INSERT, 2-DELETE, 3-UPDATE, 4-SELECT BY ID, 5-SELECT*
 */
 
-testa1(5,4);
+testa1(5,5);
     
 
 ?>
