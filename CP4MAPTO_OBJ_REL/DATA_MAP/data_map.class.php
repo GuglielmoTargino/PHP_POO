@@ -13,7 +13,7 @@
    * Aluno: Guglielmo Targino
    * Data: 14ago24
    * Versão: v0
-   * pg261-265
+   * pg262-265
    */
 include_once '../DAO_CP4/dao_cp4.php';
 
