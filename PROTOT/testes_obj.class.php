@@ -1,12 +1,12 @@
 <?php
 
 class Pai{
-    private $nome;
-    private $idade;
+   private $nome;
+   private $idade;
 
-    function __construct($a,$b)    {
-        $this->nome=$a;
-        $this->idade=$b;
+    function __construct()    {
+        $this->nome="Guga";
+        $this->idade=48;
     
     }
 
@@ -23,12 +23,12 @@ class Pai{
 }
 
 class Filho extends Pai{
-    private $sobre_nome;
+   private $sobre_nome;
 
-    function __construct($a,$b,$f)    {
+    function __construct()    {
         
-        parent:: __construct($a,$b);
-        $this->sobre_nome=$f;
+        parent:: __construct();
+        $this->sobre_nome="targino";
 
     }
 
@@ -36,9 +36,8 @@ class Filho extends Pai{
 
         print($this->getAtrib());
         print($this->sobre_nome);
-        
-
-    }
+        //return "$this->nome $this->idade"; Assim em modo protected
+        }
 
 
 }
@@ -48,7 +47,6 @@ class Filho extends Pai{
 $filho= new Filho('Guga','Targino',45);
 echo"<br>";
 echo $filho->Mostrar();
-
 
 
 
