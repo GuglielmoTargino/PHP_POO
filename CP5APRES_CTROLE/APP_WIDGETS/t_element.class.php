@@ -12,6 +12,7 @@
 
     private $name;
     private $properties;
+    private $children;
 
     public function __construct($nam)
     {
