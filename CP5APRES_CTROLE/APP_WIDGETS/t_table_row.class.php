@@ -15,7 +15,7 @@
 
     public function addCell($h)
     {
-        $cell=new TTableCell($j);
+        $cell=new TTableCell($h);
         parent::add($cell);
         return $cell;
     }

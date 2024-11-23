@@ -11,7 +11,7 @@
     public function __construct($f)
     {
         parent::__construct('td');
-        parent::add($value);
+        parent::add($f);
     }
  }
 
