@@ -14,11 +14,11 @@
 
 
 echo '<table>';
+
 echo '<tr>';
 echo '<td> ID </td>';
 echo '<td> NOME </td>';
 echo '</tr>';
-
 
 $i=0;
 foreach($dados as $x){
@@ -26,9 +26,6 @@ foreach($dados as $x){
     echo "<td> {$x[0]} </td>";
     echo "<td> {$x[1]} </td>";
     echo "</tr>";
-    
-   
-
 }
 
 echo '</table>';
