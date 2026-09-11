@@ -4,7 +4,7 @@ REvisão do exercício do livro PHP-POO
 Aluno: Guglielmo Targino.
 Data: 02jul24
 Versão:v2
-
+pg32
 */
 
 $ght=array('dara','todi','joe');
